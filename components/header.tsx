@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
@@ -9,7 +10,7 @@ const navLinks = [
   { href: "#uebersicht", label: "Uebersicht" },
   { href: "#sap-matrix", label: "SAP-Matrix" },
   { href: "#roadmap", label: "Roadmap" },
-  { href: "#expertise", label: "Expertise" },
+  { href: "/vergleich", label: "Vergleich", isPage: true },
   { href: "#kontakt", label: "Kontakt" },
 ]
 
@@ -44,9 +45,15 @@ export function Header() {
 
         <nav className="hidden items-center gap-5 md:flex lg:gap-7">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-              {link.label}
-            </a>
+            link.isPage ? (
+              <Link key={link.href} href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                {link.label}
+              </Link>
+            ) : (
+              <a key={link.href} href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                {link.label}
+              </a>
+            )
           ))}
           <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
             DSAG 2026
@@ -66,14 +73,25 @@ export function Header() {
         <div className="fixed inset-0 top-[57px] z-50 flex flex-col bg-background/98 backdrop-blur-xl md:hidden">
           <nav className="flex flex-1 flex-col gap-1 px-4 pt-4">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="flex items-center rounded-xl px-4 py-4 text-lg font-medium text-foreground transition-colors active:bg-secondary"
-              >
-                {link.label}
-              </a>
+              link.isPage ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center rounded-xl px-4 py-4 text-lg font-medium text-foreground transition-colors active:bg-secondary"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center rounded-xl px-4 py-4 text-lg font-medium text-foreground transition-colors active:bg-secondary"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
             <div className="mt-4 border-t border-border/50 pt-4">
               <span className="inline-flex rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">

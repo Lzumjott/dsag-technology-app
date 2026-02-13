@@ -20,6 +20,33 @@ export interface AlternativeSolution {
   vendor?: string
 }
 
+export type Industry = 
+  | "Automotive"
+  | "Chemie & Pharma"
+  | "Energie & Versorgung"
+  | "Fertigung & Maschinenbau"
+  | "Finanzdienstleistungen"
+  | "Handel & Konsumgueter"
+  | "Logistik & Transport"
+  | "Oeffentlicher Sektor"
+  | "Gesundheitswesen"
+  | "Telekommunikation"
+  | "Professional Services"
+
+export const industries: Industry[] = [
+  "Automotive",
+  "Chemie & Pharma",
+  "Energie & Versorgung",
+  "Fertigung & Maschinenbau",
+  "Finanzdienstleistungen",
+  "Handel & Konsumgueter",
+  "Logistik & Transport",
+  "Oeffentlicher Sektor",
+  "Gesundheitswesen",
+  "Telekommunikation",
+  "Professional Services",
+]
+
 export interface TechTrend {
   id: string
   title: string
@@ -38,6 +65,7 @@ export interface TechTrend {
   investmentPriority: "Kritisch" | "Hoch" | "Mittel" | "Beobachten"
   realcoreExpertise: boolean
   timelineYear: number
+  industries: Industry[]
 }
 
 export const categories = [
@@ -52,6 +80,20 @@ export const categories = [
   "Plattform & DevOps",
   "User Experience",
 ] as const
+
+export const industryColors: Record<Industry, string> = {
+  "Automotive": "bg-blue-500/20 text-blue-400 border-blue-500/30",
+  "Chemie & Pharma": "bg-purple-500/20 text-purple-400 border-purple-500/30",
+  "Energie & Versorgung": "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
+  "Fertigung & Maschinenbau": "bg-orange-500/20 text-orange-400 border-orange-500/30",
+  "Finanzdienstleistungen": "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
+  "Handel & Konsumgueter": "bg-pink-500/20 text-pink-400 border-pink-500/30",
+  "Logistik & Transport": "bg-cyan-500/20 text-cyan-400 border-cyan-500/30",
+  "Oeffentlicher Sektor": "bg-indigo-500/20 text-indigo-400 border-indigo-500/30",
+  "Gesundheitswesen": "bg-red-500/20 text-red-400 border-red-500/30",
+  "Telekommunikation": "bg-teal-500/20 text-teal-400 border-teal-500/30",
+  "Professional Services": "bg-slate-500/20 text-slate-400 border-slate-500/30",
+}
 
 export type Category = (typeof categories)[number]
 
@@ -156,6 +198,7 @@ export const trends: TechTrend[] = [
       "Chatbot fuer HR-Self-Services",
     ],
     icon: "brain",
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Professional Services"],
   },
   {
     id: "agentic-ai",
@@ -222,6 +265,7 @@ export const trends: TechTrend[] = [
       "Selbststaendige Fehlerbehebung in IT-Systemen",
     ],
     icon: "bot",
+    industries: ["Automotive", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Logistik & Transport", "Professional Services"],
   },
   {
     id: "clean-core",
@@ -281,6 +325,7 @@ export const trends: TechTrend[] = [
       "Custom Code Remediation mit ABAP Test Cockpit",
     ],
     icon: "layers",
+    industries: ["Automotive", "Chemie & Pharma", "Energie & Versorgung", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Logistik & Transport", "Oeffentlicher Sektor", "Gesundheitswesen", "Telekommunikation", "Professional Services"],
   },
   {
     id: "data-fabric",
@@ -359,6 +404,7 @@ export const trends: TechTrend[] = [
       "KI-gestuetzte Datenqualitaetsmonitoring",
     ],
     icon: "database",
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Logistik & Transport", "Telekommunikation"],
   },
   {
     id: "hyperautomation",
@@ -430,6 +476,7 @@ export const trends: TechTrend[] = [
       "Compliance-Monitoring in Echtzeit",
     ],
     icon: "workflow",
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Logistik & Transport", "Professional Services"],
   },
   {
     id: "zero-trust",
@@ -501,6 +548,7 @@ export const trends: TechTrend[] = [
       "Privileged Access Management fuer SAP-Basis",
     ],
     icon: "shield",
+    industries: ["Finanzdienstleistungen", "Oeffentlicher Sektor", "Gesundheitswesen", "Energie & Versorgung", "Telekommunikation"],
   },
   {
     id: "green-it",
@@ -567,6 +615,7 @@ export const trends: TechTrend[] = [
       "Green Procurement und Lieferantenbewertung",
     ],
     icon: "leaf",
+    industries: ["Automotive", "Chemie & Pharma", "Energie & Versorgung", "Fertigung & Maschinenbau", "Handel & Konsumgueter", "Logistik & Transport"],
   },
   {
     id: "composable-integration",
@@ -638,6 +687,7 @@ export const trends: TechTrend[] = [
       "API-Gateway fuer SAP-Backend-Services",
     ],
     icon: "plug",
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Logistik & Transport", "Telekommunikation"],
   },
   {
     id: "digital-twin",
@@ -709,6 +759,7 @@ export const trends: TechTrend[] = [
       "Supply-Chain-Simulation und Szenarioplanung",
     ],
     icon: "cpu",
+    industries: ["Automotive", "Fertigung & Maschinenbau", "Energie & Versorgung", "Logistik & Transport"],
   },
   {
     id: "quantum-ready",
@@ -758,6 +809,7 @@ export const trends: TechTrend[] = [
       "Molekuelsimulation fuer Materialforschung",
     ],
     icon: "atom",
+    industries: ["Chemie & Pharma", "Finanzdienstleistungen", "Energie & Versorgung"],
   },
   {
     id: "edge-computing",
@@ -822,6 +874,7 @@ export const trends: TechTrend[] = [
       "5G-Campusnetz fuer vernetzte Fertigung",
     ],
     icon: "radio",
+    industries: ["Automotive", "Fertigung & Maschinenbau", "Logistik & Transport", "Handel & Konsumgueter", "Telekommunikation"],
   },
   {
     id: "low-code",
@@ -893,6 +946,7 @@ export const trends: TechTrend[] = [
       "Automatisierte Onboarding-Prozesse",
     ],
     icon: "blocks",
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Oeffentlicher Sektor", "Professional Services"],
   },
   {
     id: "sovereign-cloud",
@@ -951,6 +1005,7 @@ export const trends: TechTrend[] = [
       "KRITIS-Unternehmen mit erhoehten Sicherheitsanforderungen",
     ],
     icon: "cloud",
+    industries: ["Finanzdienstleistungen", "Oeffentlicher Sektor", "Gesundheitswesen", "Energie & Versorgung"],
   },
   {
     id: "composable-commerce",
@@ -1016,6 +1071,7 @@ export const trends: TechTrend[] = [
       "Customer Data Platform fuer 360-Grad-Sicht",
     ],
     icon: "shopping-cart",
+    industries: ["Handel & Konsumgueter", "Fertigung & Maschinenbau", "Chemie & Pharma"],
   },
   {
     id: "devops-platform",
@@ -1081,6 +1137,7 @@ export const trends: TechTrend[] = [
       "Infrastructure-as-Code fuer SAP BTP Subaccounts",
     ],
     icon: "git-branch",
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Telekommunikation", "Professional Services"],
   },
   {
     id: "btp-strategy",
@@ -1147,6 +1204,7 @@ export const trends: TechTrend[] = [
       "Zentrale Event-basierte Architektur auf BTP",
     ],
     icon: "server",
+    industries: ["Automotive", "Chemie & Pharma", "Energie & Versorgung", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Logistik & Transport", "Oeffentlicher Sektor", "Gesundheitswesen", "Telekommunikation", "Professional Services"],
   },
   {
     id: "ai-governance",
@@ -1206,6 +1264,7 @@ export const trends: TechTrend[] = [
       "Erklaerbarkeits-Reports fuer Finanz-KI",
     ],
     icon: "scale",
+    industries: ["Finanzdienstleistungen", "Gesundheitswesen", "Oeffentlicher Sektor", "Chemie & Pharma"],
   },
   {
     id: "observability",
@@ -1264,6 +1323,7 @@ export const trends: TechTrend[] = [
       "AIOps-basierte Anomalie-Erkennung in Batch-Jobs",
     ],
     icon: "activity",
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Telekommunikation", "Professional Services"],
   },
   {
     id: "ux-fiori",
@@ -1323,6 +1383,7 @@ export const trends: TechTrend[] = [
       "Barrierefreie SAP-Oberflaechen nach WCAG 2.1",
     ],
     icon: "layout",
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Logistik & Transport", "Oeffentlicher Sektor", "Gesundheitswesen", "Telekommunikation", "Professional Services"],
   },
   {
     id: "supply-chain-resilience",
@@ -1388,6 +1449,7 @@ export const trends: TechTrend[] = [
       "Multi-Tier-Lieferantenmanagement ueber SAP Business Network",
     ],
     icon: "truck",
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Handel & Konsumgueter", "Logistik & Transport"],
   },
 ]
 

@@ -1,11 +1,12 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import {
   Brain, Bot, Layers, Database, Workflow, Shield, Leaf, Plug, Cpu, Atom, Radio,
   Blocks, ChevronDown, ChevronUp, CheckCircle2, Clock, ArrowRight, Cloud,
   ShoppingCart, GitBranch, Server, Scale, Activity, Layout, Truck, Award,
-  TrendingUp, Users,
+  TrendingUp, Users, ExternalLink,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import type { TechTrend } from "@/lib/trends-data"
@@ -222,6 +223,17 @@ export function TrendCard({ trend }: TrendCardProps) {
               </div>
             </div>
           )}
+
+          {/* Detail Link */}
+          <div className="mt-5 border-t border-border/50 pt-4">
+            <Link
+              href={`/trends/${trend.id}`}
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:brightness-110"
+            >
+              Alle Details anzeigen
+              <ExternalLink className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       )}
     </article>
