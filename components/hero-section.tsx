@@ -1,6 +1,10 @@
 import { ArrowDown, Sparkles } from "lucide-react"
+import { trends } from "@/lib/trends-data"
 
 export function HeroSection() {
+  const totalSap = trends.reduce((acc, t) => acc + t.sapSolutions.length, 0)
+  const avgAdoption = Math.round(trends.reduce((acc, t) => acc + t.marketAdoption, 0) / trends.length)
+
   return (
     <section className="relative overflow-hidden border-b border-border/50 px-4 pb-12 pt-16 sm:px-6 sm:pb-20 sm:pt-24 md:pt-32">
       {/* Background glow */}
@@ -21,8 +25,8 @@ export function HeroSection() {
           </h1>
 
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground text-pretty sm:mt-6 sm:text-lg md:text-xl">
-            Entdecken Sie die aktuellen und zukuenftigen technologischen Trends mit passenden SAP-Loesungen 
-            und alternativen Technologien fuer Ihr Unternehmen.
+            Entdecken Sie {trends.length} aktuelle und zukuenftige Technologietrends mit {totalSap} SAP-Loesungen, 
+            Gartner-Einordnung und realen Praxisbeispielen fuer Ihr Unternehmen.
           </p>
 
           <div className="mt-8 flex w-full flex-col items-center gap-3 px-4 sm:mt-10 sm:w-auto sm:flex-row sm:gap-4 sm:px-0">
@@ -34,20 +38,20 @@ export function HeroSection() {
               <ArrowDown className="h-4 w-4" />
             </a>
             <a
-              href="#uebersicht"
+              href="#roadmap"
               className="flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-secondary px-6 py-3.5 text-sm font-semibold text-secondary-foreground transition-colors active:bg-muted sm:w-auto sm:rounded-lg sm:py-3 hover:bg-muted"
             >
-              Zur Uebersicht
+              SAP Roadmap ansehen
             </a>
           </div>
 
-          {/* Stats */}
-          <div className="mt-10 grid w-full max-w-3xl grid-cols-2 gap-3 sm:mt-16 sm:gap-6 md:grid-cols-4">
+          {/* Dynamic Stats */}
+          <div className="mt-10 grid w-full max-w-4xl grid-cols-2 gap-3 sm:mt-16 sm:gap-4 md:grid-cols-4">
             {[
-              { value: "12", label: "Tech-Trends" },
-              { value: "18+", label: "SAP-Loesungen" },
-              { value: "7", label: "Kategorien" },
-              { value: "2026", label: "Roadmap" },
+              { value: String(trends.length), label: "Tech-Trends" },
+              { value: `${totalSap}`, label: "SAP-Loesungen" },
+              { value: `${avgAdoption}%`, label: "Avg. Adoption" },
+              { value: "10", label: "Kategorien" },
             ].map((stat) => (
               <div key={stat.label} className="rounded-xl border border-border/50 bg-card/50 p-3 backdrop-blur-sm sm:p-4">
                 <div className="font-display text-xl font-bold text-primary sm:text-2xl md:text-3xl">{stat.value}</div>

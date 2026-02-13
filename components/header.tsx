@@ -3,19 +3,24 @@
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 
+const navLinks = [
+  { href: "#trends", label: "Trends" },
+  { href: "#uebersicht", label: "Uebersicht" },
+  { href: "#roadmap", label: "Roadmap" },
+  { href: "#expertise", label: "Expertise" },
+  { href: "#kontakt", label: "Kontakt" },
+]
+
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = "hidden"
     } else {
       document.body.style.overflow = ""
     }
-    return () => {
-      document.body.style.overflow = ""
-    }
+    return () => { document.body.style.overflow = "" }
   }, [mobileOpen])
 
   return (
@@ -35,16 +40,12 @@ export function Header() {
           </div>
         </a>
 
-        <nav className="hidden items-center gap-6 md:flex lg:gap-8">
-          <a href="#trends" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            Trends
-          </a>
-          <a href="#uebersicht" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            Uebersicht
-          </a>
-          <a href="#kontakt" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-            Kontakt
-          </a>
+        <nav className="hidden items-center gap-5 md:flex lg:gap-7">
+          {navLinks.map((link) => (
+            <a key={link.href} href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              {link.label}
+            </a>
+          ))}
           <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
             DSAG 2026
           </span>
@@ -59,15 +60,10 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile overlay menu */}
       {mobileOpen && (
         <div className="fixed inset-0 top-[57px] z-50 flex flex-col bg-background/98 backdrop-blur-xl md:hidden">
           <nav className="flex flex-1 flex-col gap-1 px-4 pt-4">
-            {[
-              { href: "#trends", label: "Trends" },
-              { href: "#uebersicht", label: "Uebersicht" },
-              { href: "#kontakt", label: "Kontakt" },
-            ].map((link) => (
+            {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
