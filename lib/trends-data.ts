@@ -1392,10 +1392,83 @@ export const trends: TechTrend[] = [
 ]
 
 export const sapRoadmap = [
-  { year: 2023, items: ["Clean Core Strategie", "SAP Joule Launch", "SAP Integration Suite Ausbau", "ABAP Cloud GA"] },
-  { year: 2024, items: ["SAP Business AI (80+ Szenarien)", "SAP Datasphere Ausbau", "SAP Build Suite Integration", "SAP Signavio in Cloud ALM", "EU AI Act in Kraft"] },
-  { year: 2025, items: ["SAP Sustainability Control Tower Erweiterung", "SAP S/4HANA Cloud Sovereign Edition", "SAP Business Data Cloud", "DevOps fuer SAP Ausbau", "CSRD-Reporting-Pflicht"] },
-  { year: 2026, items: ["SAP Joule Collaborative Agents", "SAP AI Agent Builder", "SAP AI Ethics Toolkit", "EU AI Act Hochrisiko-Compliance", "DSAG Technologietage"] },
-  { year: 2027, items: ["SAP Green Ledger", "Nur Clean Core Features", "Vollstaendige BTP-Konsolidierung", "Next-Gen SAP Fiori"] },
-  { year: 2028, items: ["Ende Mainstream-Wartung ECC 6.0", "Post-Quantum Cryptography Readiness", "Autonomous Enterprise Prozesse"] },
+  {
+    year: 2023,
+    items: [
+      "Clean Core Strategie offiziell eingefuehrt (SAP TechEd)",
+      "SAP Joule KI-Copilot Launch fuer S/4HANA Cloud",
+      "SAP Integration Suite mit Trading Partner Management",
+      "ABAP Cloud (Steampunk) General Availability",
+      "SAP Analytics Cloud mit Planning-Integration",
+      "SAP Cloud ALM als Standard-ALM fuer Cloud-Kunden",
+    ],
+  },
+  {
+    year: 2024,
+    items: [
+      "SAP Business AI: 80+ vordefinierte Szenarien live",
+      "SAP Datasphere mit KI-gestuetzter Datenexploration",
+      "SAP Build Suite vollstaendig in BTP integriert",
+      "SAP Signavio nativ in SAP Cloud ALM eingebunden",
+      "EU AI Act in Kraft getreten (August 2024)",
+      "NIS2-Richtlinie umgesetzt (Oktober 2024)",
+      "SAP S/4HANA 2023 FPS02 mit Clean Core Dashboard",
+      "NIST Post-Quantum-Standards veroeffentlicht (ML-KEM, ML-DSA)",
+    ],
+  },
+  {
+    year: 2025,
+    items: [
+      "SAP Sustainability Control Tower mit CSRD/ESRS-Templates",
+      "SAP S/4HANA Cloud Sovereign Edition GA (EU Access)",
+      "SAP Business Data Cloud fuer unternehmensweite KI",
+      "DevOps-Toolchain fuer SAP: gCTS + CI/CD + Terraform",
+      "CSRD-Reporting-Pflicht fuer grosse Unternehmen",
+      "EU AI Act Transparenzpflichten ab August 2025",
+      "SAP Fiori Horizon Theme als neuer Standard",
+      "SAP Advanced Event Mesh Ausbau (Multi-Cloud)",
+    ],
+  },
+  {
+    year: 2026,
+    items: [
+      "SAP Joule Collaborative Agents (Q3 2026)",
+      "SAP AI Agent Builder auf BTP (Q4 2026)",
+      "SAP AI Ethics Toolkit fuer EU AI Act (Q2 2026)",
+      "EU AI Act: Hochrisiko-KI vollstaendig konform (August 2026)",
+      "DSAG Technologietage 2026",
+      "SAP S/4HANA Cloud 2026 mit Next-Gen Planning",
+      "SAP Build Code mit generativer KI-Unterstuetzung",
+    ],
+  },
+  {
+    year: 2027,
+    items: [
+      "SAP Green Ledger: CO2-Bewertung je Finanztransaktion",
+      "Nur noch Clean-Core-konforme neue S/4HANA-Features",
+      "Vollstaendige BTP-Service-Konsolidierung",
+      "Next-Gen SAP Fiori mit KI-Personalisierung",
+      "SAP HANA Cloud mit Vector-Search fuer RAG",
+      "Autonomous ERP: KI-gesteuerte Standardprozesse",
+    ],
+  },
+  {
+    year: 2028,
+    items: [
+      "Ende Mainstream-Wartung SAP ECC 6.0 (31.12.2027)",
+      "Post-Quantum Cryptography Readiness fuer SAP-Systeme",
+      "Autonomous Enterprise: 50% automatisierte Entscheidungen",
+      "SAP Digital Twin Platform fuer Lieferketten",
+      "Extended Wartung ECC nur noch kostenpflichtig",
+    ],
+  },
+  {
+    year: 2030,
+    items: [
+      "Ende Extended Wartung ECC 6.0 (geplant)",
+      "100% Cloud-native SAP-Landschaften als Standard",
+      "Quantum-Computing erste SAP-Szenarien produktiv",
+      "Vollautonome Supply-Chain-Steuerung",
+    ],
+  },
 ]
