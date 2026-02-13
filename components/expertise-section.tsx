@@ -7,7 +7,7 @@ const expertiseTrends = trends.filter((t) => t.realcoreExpertise)
 const stats = [
   { icon: Award, value: `${expertiseTrends.length}`, label: "Kompetenzfelder", description: "Tiefgehende Expertise in aktuellen Tech-Trends" },
   { icon: Building2, value: "200+", label: "SAP-Projekte", description: "Erfolgreich umgesetzte Transformationsprojekte" },
-  { icon: Users, value: "150+", label: "Berater", description: "Zertifizierte SAP-Experten im DACH-Raum" },
+  { icon: Users, value: "500+", label: "Berater", description: "Zertifizierte SAP-Experten im DACH-Raum" },
   { icon: TrendingUp, value: "15+", label: "Jahre Erfahrung", description: "In SAP-Beratung und digitaler Transformation" },
 ]
 
