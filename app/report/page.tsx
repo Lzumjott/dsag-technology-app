@@ -1,13 +1,13 @@
 "use client"
 
 import { useSearchParams } from "next/navigation"
-import { useMemo } from "react"
+import { useMemo, Suspense } from "react"
 import Link from "next/link"
 import { trends, statusLabels, gartnerColors, investmentColors, type Industry, industryColors } from "@/lib/trends-data"
 import { ArrowLeft, Printer, CheckCircle2, Clock, Award, Building2 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-export default function ReportPage() {
+function ReportContent() {
   const searchParams = useSearchParams()
   const idsParam = searchParams.get("ids")
   const industryParam = searchParams.get("industry")
@@ -233,5 +233,13 @@ export default function ReportPage() {
         }
       `}</style>
     </div>
+  )
+}
+
+export default function ReportPage() {
+  return (
+    <Suspense fallback={<div className="flex min-h-screen items-center justify-center"><div className="text-muted-foreground">Laden...</div></div>}>
+      <ReportContent />
+    </Suspense>
   )
 }

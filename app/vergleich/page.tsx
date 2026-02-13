@@ -1,13 +1,13 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, Suspense } from "react"
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { trends, statusLabels, statusColors, gartnerColors, investmentColors, industryColors, type Industry } from "@/lib/trends-data"
 import { ArrowLeft, Plus, X, CheckCircle2, Clock, TrendingUp, BarChart3, Target, Building2, Award } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-export default function VergleichPage() {
+function VergleichContent() {
   const searchParams = useSearchParams()
   const initialIds = searchParams.get("ids")?.split(",").filter(Boolean) || []
   
@@ -305,5 +305,13 @@ export default function VergleichPage() {
         )}
       </main>
     </div>
+  )
+}
+
+export default function VergleichPage() {
+  return (
+    <Suspense fallback={<div className="flex min-h-screen items-center justify-center"><div className="text-muted-foreground">Laden...</div></div>}>
+      <VergleichContent />
+    </Suspense>
   )
 }
