@@ -18,14 +18,14 @@ export function Footer() {
           </p>
           <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
             <a
-              href="mailto:info@realcore-group.com"
+              href="mailto:info@realcore.de"
               className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-all active:brightness-90 sm:w-auto sm:rounded-lg sm:py-3 hover:brightness-110"
             >
               <Mail className="h-4 w-4" />
               Gespraech vereinbaren
             </a>
             <a
-              href="https://www.realcore-group.com"
+              href="https://www.realcore.de"
               target="_blank"
               rel="noopener noreferrer"
               className="flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-secondary px-6 py-3.5 text-sm font-semibold text-secondary-foreground transition-colors active:bg-muted sm:w-auto sm:rounded-lg sm:py-3 hover:bg-muted"
@@ -85,15 +85,15 @@ export function Footer() {
               </h3>
               <ul className="flex flex-col gap-3">
                 <li>
-                  <a href="mailto:info@realcore-group.com" className="flex items-center gap-2 text-[13px] text-muted-foreground transition-colors active:text-foreground sm:text-sm hover:text-foreground">
+                  <a href="mailto:info@realcore.de" className="flex items-center gap-2 text-[13px] text-muted-foreground transition-colors active:text-foreground sm:text-sm hover:text-foreground">
                     <Mail className="h-4 w-4 shrink-0 text-primary" />
-                    info@realcore-group.com
+                    info@realcore.de
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.realcore-group.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[13px] text-muted-foreground transition-colors active:text-foreground sm:text-sm hover:text-foreground">
+                  <a href="https://www.realcore.de" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-[13px] text-muted-foreground transition-colors active:text-foreground sm:text-sm hover:text-foreground">
                     <Globe className="h-4 w-4 shrink-0 text-primary" />
-                    www.realcore-group.com
+                    www.realcore.de
                   </a>
                 </li>
                 <li>

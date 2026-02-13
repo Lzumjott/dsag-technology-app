@@ -83,7 +83,7 @@ export function Header() {
           </nav>
           <div className="safe-bottom border-t border-border/50 px-4 py-6">
             <a
-              href="mailto:info@realcore-group.com"
+              href="mailto:info@realcore.de"
               onClick={() => setMobileOpen(false)}
               className="flex w-full items-center justify-center rounded-xl bg-primary px-6 py-4 text-sm font-semibold text-primary-foreground transition-all active:brightness-90"
             >
