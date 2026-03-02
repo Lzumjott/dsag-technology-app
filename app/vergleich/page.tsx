@@ -36,19 +36,22 @@ function VergleichContent() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="mx-auto flex h-14 max-w-7xl items-center gap-4 px-4 sm:px-6">
-          <Link href="/#trends" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
-            <ArrowLeft className="h-4 w-4" />
-            <span className="hidden sm:inline">Zurück</span>
-          </Link>
-          <div className="h-4 w-px bg-border" />
-          <span className="text-sm font-medium text-foreground">Trend-Vergleich</span>
+      <header className="sticky top-0 z-50 border-b border-[#DADADA] bg-white">
+        <div className="grid-section">
+          <div className="grid-content flex h-20 items-center gap-4">
+            <Link href="/#trends" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
+              <ArrowLeft className="h-4 w-4" />
+              <span className="hidden sm:inline">Zurück</span>
+            </Link>
+            <div className="h-4 w-px bg-border" />
+            <span className="text-sm font-medium text-foreground">Trend-Vergleich</span>
+          </div>
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
-        <div className="mb-8">
+      <main className="grid-section py-[var(--grid-unit)]">
+        <div className="grid-content">
+        <div className="mb-[var(--grid-unit)]">
           <h1 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
             Trends vergleichen
           </h1>
@@ -58,11 +61,11 @@ function VergleichContent() {
         </div>
 
         {/* Trend Selector */}
-        <div className="mb-8 flex flex-wrap items-center gap-3">
+        <div className="mb-[var(--grid-unit)] flex flex-wrap items-center gap-3">
           {selectedTrends.map((trend) => trend && (
             <div
               key={trend.id}
-              className="flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/10 px-3 py-2"
+              className="flex items-center gap-2 border border-primary/30 bg-primary/10 px-3 py-2"
             >
               <span className="text-sm font-medium text-foreground">{trend.title}</span>
               <button
@@ -78,19 +81,19 @@ function VergleichContent() {
             <div className="relative">
               <button
                 onClick={() => setShowSelector(!showSelector)}
-                className="flex items-center gap-2 rounded-lg border border-dashed border-border px-3 py-2 text-sm text-muted-foreground hover:border-primary hover:text-primary"
+                className="flex items-center gap-2 border border-dashed border-border px-3 py-2 text-sm text-muted-foreground hover:border-primary hover:text-primary"
               >
                 <Plus className="h-4 w-4" />
                 Trend hinzufügen
               </button>
               
               {showSelector && (
-                <div className="absolute left-0 top-full z-50 mt-2 max-h-64 w-72 overflow-y-auto rounded-lg border border-border bg-card p-2 shadow-lg">
+                <div className="absolute left-0 top-full z-50 mt-2 max-h-64 w-72 overflow-y-auto border border-border bg-card p-2 shadow-lg">
                   {availableTrends.map((trend) => (
                     <button
                       key={trend.id}
                       onClick={() => addTrend(trend.id)}
-                      className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm hover:bg-secondary"
+                      className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm hover:bg-secondary"
                     >
                       <span className="font-medium text-foreground">{trend.title}</span>
                       <span className="text-xs text-muted-foreground">({trend.category})</span>
@@ -104,20 +107,20 @@ function VergleichContent() {
 
         {/* Comparison Table */}
         {selectedTrends.length >= 2 ? (
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto bg-white">
             <table className="w-full border-collapse">
               <thead>
                 <tr>
-                  <th className="border-b border-border/50 px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  <th className="border-b border-border/50 p-[var(--grid-unit-eighth)] text-left text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                     Merkmal
                   </th>
                   {selectedTrends.map((trend) => trend && (
-                    <th key={trend.id} className="border-b border-border/50 px-4 py-3 text-left">
+                    <th key={trend.id} className="border-b border-border/50 p-[var(--grid-unit-eighth)] text-left">
                       <div className="flex items-center gap-2">
                         <span className="text-sm font-semibold text-foreground">{trend.title}</span>
                         {trend.realcoreExpertise && <Award className="h-4 w-4 text-primary" />}
                       </div>
-                      <span className={cn("mt-1 inline-block rounded-md border px-2 py-0.5 text-[10px] font-medium", statusColors[trend.status])}>
+                      <span className={cn("mt-1 inline-block border px-2 py-0.5 text-[10px] font-medium", statusColors[trend.status])}>
                         {statusLabels[trend.status]}
                       </span>
                     </th>
@@ -127,14 +130,14 @@ function VergleichContent() {
               <tbody>
                 {/* Reifegrad */}
                 <tr className="border-b border-border/30">
-                  <td className="px-4 py-3 text-sm font-medium text-muted-foreground">
+                  <td className="p-[var(--grid-unit-eighth)] text-sm font-medium text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <TrendingUp className="h-4 w-4 text-primary" />
                       Reifegrad
                     </div>
                   </td>
                   {selectedTrends.map((trend) => trend && (
-                    <td key={trend.id} className="px-4 py-3">
+                    <td key={trend.id} className="p-[var(--grid-unit-eighth)]">
                       <div className="flex items-center gap-2">
                         <div className="h-2 w-20 overflow-hidden rounded-full bg-muted">
                           <div className="h-full rounded-full bg-primary" style={{ width: `${trend.maturityPercent}%` }} />
@@ -146,15 +149,15 @@ function VergleichContent() {
                 </tr>
 
                 {/* Marktadoption */}
-                <tr className="border-b border-border/30 bg-card/30">
-                  <td className="px-4 py-3 text-sm font-medium text-muted-foreground">
+                <tr className="border-b border-border/30 bg-white">
+                  <td className="p-[var(--grid-unit-eighth)] text-sm font-medium text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <BarChart3 className="h-4 w-4 text-sky-400" />
                       Marktadoption
                     </div>
                   </td>
                   {selectedTrends.map((trend) => trend && (
-                    <td key={trend.id} className="px-4 py-3">
+                    <td key={trend.id} className="p-[var(--grid-unit-eighth)]">
                       <div className="flex items-center gap-2">
                         <div className="h-2 w-20 overflow-hidden rounded-full bg-muted">
                           <div className="h-full rounded-full bg-sky-400" style={{ width: `${trend.marketAdoption}%` }} />
@@ -167,14 +170,14 @@ function VergleichContent() {
 
                 {/* Investitionspriorität */}
                 <tr className="border-b border-border/30">
-                  <td className="px-4 py-3 text-sm font-medium text-muted-foreground">
+                  <td className="p-[var(--grid-unit-eighth)] text-sm font-medium text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <Target className="h-4 w-4 text-amber-400" />
                       Investitionspriorität
                     </div>
                   </td>
                   {selectedTrends.map((trend) => trend && (
-                    <td key={trend.id} className="px-4 py-3">
+                    <td key={trend.id} className="p-[var(--grid-unit-eighth)]">
                       <span className={cn("text-sm font-semibold", investmentColors[trend.investmentPriority])}>
                         {trend.investmentPriority}
                       </span>
@@ -183,12 +186,12 @@ function VergleichContent() {
                 </tr>
 
                 {/* Gartner Phase */}
-                <tr className="border-b border-border/30 bg-card/30">
-                  <td className="px-4 py-3 text-sm font-medium text-muted-foreground">
+                <tr className="border-b border-border/30 bg-white">
+                  <td className="p-[var(--grid-unit-eighth)] text-sm font-medium text-muted-foreground">
                     Gartner Phase
                   </td>
                   {selectedTrends.map((trend) => trend && (
-                    <td key={trend.id} className="px-4 py-3">
+                    <td key={trend.id} className="p-[var(--grid-unit-eighth)]">
                       <span className={cn("text-sm font-medium", gartnerColors[trend.gartnerPhase])}>
                         {trend.gartnerPhase}
                       </span>
@@ -198,14 +201,14 @@ function VergleichContent() {
 
                 {/* SAP-Lösungen */}
                 <tr className="border-b border-border/30">
-                  <td className="px-4 py-3 text-sm font-medium text-muted-foreground">
+                  <td className="p-[var(--grid-unit-eighth)] text-sm font-medium text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <CheckCircle2 className="h-4 w-4 text-emerald-400" />
                       SAP-Lösungen
                     </div>
                   </td>
                   {selectedTrends.map((trend) => trend && (
-                    <td key={trend.id} className="px-4 py-3">
+                    <td key={trend.id} className="p-[var(--grid-unit-eighth)]">
                       <div className="flex flex-col gap-1">
                         <span className="text-sm font-medium text-foreground">
                           {trend.sapSolutions.filter(s => s.available).length} verfügbar
@@ -222,12 +225,12 @@ function VergleichContent() {
                 </tr>
 
                 {/* Alternativen */}
-                <tr className="border-b border-border/30 bg-card/30">
-                  <td className="px-4 py-3 text-sm font-medium text-muted-foreground">
+                <tr className="border-b border-border/30 bg-white">
+                  <td className="p-[var(--grid-unit-eighth)] text-sm font-medium text-muted-foreground">
                     Alternativen
                   </td>
                   {selectedTrends.map((trend) => trend && (
-                    <td key={trend.id} className="px-4 py-3">
+                    <td key={trend.id} className="p-[var(--grid-unit-eighth)]">
                       <span className="text-sm text-foreground">{trend.alternatives.length} Lösungen</span>
                     </td>
                   ))}
@@ -235,19 +238,19 @@ function VergleichContent() {
 
                 {/* Branchen */}
                 <tr className="border-b border-border/30">
-                  <td className="px-4 py-3 text-sm font-medium text-muted-foreground">
+                  <td className="p-[var(--grid-unit-eighth)] text-sm font-medium text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <Building2 className="h-4 w-4 text-indigo-400" />
                       Relevante Branchen
                     </div>
                   </td>
                   {selectedTrends.map((trend) => trend && (
-                    <td key={trend.id} className="px-4 py-3">
+                    <td key={trend.id} className="p-[var(--grid-unit-eighth)]">
                       <div className="flex flex-wrap gap-1">
                         {trend.industries.slice(0, 4).map((ind) => (
                           <span
                             key={ind}
-                            className={cn("rounded px-1.5 py-0.5 text-[10px] font-medium", industryColors[ind as Industry])}
+                            className={cn("px-1.5 py-0.5 text-[10px] font-medium", industryColors[ind as Industry])}
                           >
                             {ind.split(" ")[0]}
                           </span>
@@ -261,12 +264,12 @@ function VergleichContent() {
                 </tr>
 
                 {/* Key Benefits */}
-                <tr className="border-b border-border/30 bg-card/30">
-                  <td className="px-4 py-3 text-sm font-medium text-muted-foreground">
+                <tr className="border-b border-border/30 bg-white">
+                  <td className="p-[var(--grid-unit-eighth)] text-sm font-medium text-muted-foreground">
                     Hauptvorteile
                   </td>
                   {selectedTrends.map((trend) => trend && (
-                    <td key={trend.id} className="px-4 py-3">
+                    <td key={trend.id} className="p-[var(--grid-unit-eighth)]">
                       <ul className="space-y-1">
                         {trend.keyBenefits.slice(0, 3).map((benefit, i) => (
                           <li key={i} className="flex items-start gap-1.5 text-xs text-muted-foreground">
@@ -282,7 +285,7 @@ function VergleichContent() {
             </table>
           </div>
         ) : (
-          <div className="rounded-xl border border-dashed border-border py-16 text-center">
+          <div className="border border-dashed border-border py-[var(--grid-unit)] text-center">
             <p className="text-sm text-muted-foreground">
               Wählen Sie mindestens 2 Trends aus, um einen Vergleich zu sehen.
             </p>
@@ -291,18 +294,19 @@ function VergleichContent() {
 
         {/* Detail Links */}
         {selectedTrends.length >= 2 && (
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <div className="mt-[var(--grid-unit)] flex flex-wrap justify-center gap-3">
             {selectedTrends.map((trend) => trend && (
               <Link
                 key={trend.id}
                 href={`/trends/${trend.id}`}
-                className="rounded-lg border border-border bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground hover:bg-muted"
+                className="border border-border bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground hover:bg-muted"
               >
                 Details: {trend.title}
               </Link>
             ))}
           </div>
         )}
+        </div>
       </main>
     </div>
   )

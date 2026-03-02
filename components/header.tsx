@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ArrowRight } from "lucide-react"
 
 const navLinks = [
   { href: "#trends", label: "Trends" },
   { href: "#gartner", label: "Hype Cycle" },
-  { href: "#uebersicht", label: "Uebersicht" },
+  { href: "#übersicht", label: "Übersicht" },
   { href: "#sap-matrix", label: "SAP-Matrix" },
   { href: "#roadmap", label: "Roadmap" },
   { href: "/vergleich", label: "Vergleich", isPage: true },
@@ -27,58 +27,67 @@ export function Header() {
   }, [mobileOpen])
 
   return (
-    <header className="safe-top sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
-        <a href="#" className="flex items-center gap-2 sm:gap-3">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary sm:h-9 sm:w-9">
-            <span className="font-display text-xs font-bold text-primary-foreground sm:text-sm">RC</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-display text-base font-bold leading-tight tracking-tight text-foreground sm:text-lg">
-              RealCore Group
-            </span>
-            <span className="text-[10px] leading-tight text-muted-foreground sm:hidden">
-              DSAG 2026
-            </span>
-          </div>
-        </a>
+    <header className="safe-top sticky top-0 z-50 border-b border-[#DADADA] bg-white">
+      <div className="grid-section">
+        <div className="grid-content flex h-[var(--grid-unit-half)] items-center justify-between">
+          {/* Logo: far left */}
+          <a href="#" className="flex items-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/RealCore_Group_light.png"
+              alt="RealCore Group"
+              className="h-8 w-auto"
+            />
+          </a>
 
-        <nav className="hidden items-center gap-5 md:flex lg:gap-7">
-          {navLinks.map((link) => (
-            link.isPage ? (
-              <Link key={link.href} href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                {link.label}
-              </Link>
-            ) : (
-              <a key={link.href} href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                {link.label}
-              </a>
-            )
-          ))}
-          <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-            DSAG 2026
-          </span>
-        </nav>
+          {/* Center navigation */}
+          <nav className="hidden items-center gap-6 md:flex lg:gap-8">
+            {navLinks.map((link) => (
+              link.isPage ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium text-[#767776] transition-colors hover:text-[#80D800]"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium text-[#767776] transition-colors hover:text-[#80D800]"
+                >
+                  {link.label}
+                </a>
+              )
+            ))}
+          </nav>
 
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-secondary md:hidden"
-          aria-label={mobileOpen ? "Menu schliessen" : "Menu oeffnen"}
-        >
-          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+          {/* Right-aligned icons */}
+          <div className="flex items-center gap-3">
+
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="flex h-10 w-10 items-center justify-center text-[#767776] transition-colors hover:bg-[#E7E6E6] md:hidden"
+              aria-label={mobileOpen ? "Menu schließen" : "Menu öffnen"}
+            >
+              {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
+        </div>
       </div>
 
+      {/* Mobile overlay */}
       {mobileOpen && (
-        <div className="fixed inset-0 top-[57px] z-50 flex flex-col bg-background/98 backdrop-blur-xl md:hidden">
-          <nav className="flex flex-1 flex-col gap-1 px-4 pt-4">
+        <div className="fixed inset-0 top-[var(--grid-unit-half)] z-50 flex flex-col bg-white md:hidden">
+          <nav className="flex flex-1 flex-col gap-0 px-4 pt-4">
             {navLinks.map((link) => (
               link.isPage ? (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="flex items-center rounded-xl px-4 py-4 text-lg font-medium text-foreground transition-colors active:bg-secondary"
+                  className="flex items-center px-4 py-4 text-lg font-medium text-[#767776] transition-colors hover:bg-[#E7E6E6] hover:text-[#80D800]"
                 >
                   {link.label}
                 </Link>
@@ -87,25 +96,26 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="flex items-center rounded-xl px-4 py-4 text-lg font-medium text-foreground transition-colors active:bg-secondary"
+                  className="flex items-center px-4 py-4 text-lg font-medium text-[#767776] transition-colors hover:bg-[#E7E6E6] hover:text-[#80D800]"
                 >
                   {link.label}
                 </a>
               )
             ))}
-            <div className="mt-4 border-t border-border/50 pt-4">
-              <span className="inline-flex rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+            <div className="mt-4 border-t border-[#DADADA] pt-4">
+              <span className="inline-flex border border-[#DADADA] px-4 py-2 text-sm font-medium text-[#767776]">
                 DSAG Technologietage 2026
               </span>
             </div>
           </nav>
-          <div className="safe-bottom border-t border-border/50 px-4 py-6">
+          <div className="safe-bottom border-t border-[#DADADA] px-4 py-6">
             <a
               href="mailto:info@realcore.de"
               onClick={() => setMobileOpen(false)}
-              className="flex w-full items-center justify-center rounded-xl bg-primary px-6 py-4 text-sm font-semibold text-primary-foreground transition-all active:brightness-90"
+              className="flex w-full items-center justify-center gap-2 bg-[#80D800] px-6 py-4 text-sm font-semibold text-white transition-all active:brightness-90 hover:brightness-110"
             >
               Kontakt aufnehmen
+              <ArrowRight className="h-4 w-4" />
             </a>
           </div>
         </div>

@@ -32,7 +32,7 @@ export function CategoryFilter({ selected, onSelect }: CategoryFilterProps) {
           data-active={selected === cat}
           onClick={() => onSelect(cat)}
           className={cn(
-            "shrink-0 rounded-full border px-4 py-2.5 text-sm font-medium transition-all sm:rounded-lg sm:py-2",
+            "shrink-0 border px-[var(--grid-unit-eighth)] h-[var(--grid-unit-quarter)] text-sm font-medium transition-all",
             selected === cat
               ? "border-primary/50 bg-primary/10 text-primary"
               : "border-border bg-card text-muted-foreground active:bg-secondary hover:border-border hover:bg-secondary hover:text-foreground"

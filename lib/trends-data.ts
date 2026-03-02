@@ -26,9 +26,9 @@ export type Industry =
   | "Energie & Versorgung"
   | "Fertigung & Maschinenbau"
   | "Finanzdienstleistungen"
-  | "Handel & Konsumgueter"
+  | "Handel & Konsumgüter"
   | "Logistik & Transport"
-  | "Oeffentlicher Sektor"
+  | "Öffentlicher Sektor"
   | "Gesundheitswesen"
   | "Telekommunikation"
   | "Professional Services"
@@ -39,9 +39,9 @@ export const industries: Industry[] = [
   "Energie & Versorgung",
   "Fertigung & Maschinenbau",
   "Finanzdienstleistungen",
-  "Handel & Konsumgueter",
+  "Handel & Konsumgüter",
   "Logistik & Transport",
-  "Oeffentlicher Sektor",
+  "Öffentlicher Sektor",
   "Gesundheitswesen",
   "Telekommunikation",
   "Professional Services",
@@ -87,9 +87,9 @@ export const industryColors: Record<Industry, string> = {
   "Energie & Versorgung": "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
   "Fertigung & Maschinenbau": "bg-orange-500/20 text-orange-400 border-orange-500/30",
   "Finanzdienstleistungen": "bg-emerald-500/20 text-emerald-400 border-emerald-500/30",
-  "Handel & Konsumgueter": "bg-pink-500/20 text-pink-400 border-pink-500/30",
+  "Handel & Konsumgüter": "bg-pink-500/20 text-pink-400 border-pink-500/30",
   "Logistik & Transport": "bg-cyan-500/20 text-cyan-400 border-cyan-500/30",
-  "Oeffentlicher Sektor": "bg-indigo-500/20 text-indigo-400 border-indigo-500/30",
+  "Öffentlicher Sektor": "bg-indigo-500/20 text-indigo-400 border-indigo-500/30",
   "Gesundheitswesen": "bg-red-500/20 text-red-400 border-red-500/30",
   "Telekommunikation": "bg-teal-500/20 text-teal-400 border-teal-500/30",
   "Professional Services": "bg-slate-500/20 text-slate-400 border-slate-500/30",
@@ -132,7 +132,7 @@ export const trends: TechTrend[] = [
     title: "Generative KI im Unternehmen",
     category: "KI & Machine Learning",
     description:
-      "Generative KI revolutioniert Geschaeftsprozesse von der Content-Erstellung ueber Code-Generierung bis zur automatisierten Entscheidungsfindung. Large Language Models (LLMs) wie GPT-4, Claude und Gemini werden zunehmend in Enterprise-Workflows integriert. SAP hat mit Joule einen eigenen KI-Copiloten eingefuehrt, der natuerlichsprachige Interaktion mit SAP-Systemen ermoeglicht und ueber 80 Use Cases in S/4HANA, SuccessFactors und Ariba abdeckt.",
+      "Generative KI revolutioniert Geschäftsprozesse von der Content-Erstellung über Code-Generierung bis zur automatisierten Entscheidungsfindung. Large Language Models (LLMs) wie GPT-4, Claude und Gemini werden zunehmend in Enterprise-Workflows integriert. SAP hat mit Joule einen eigenen KI-Copiloten eingeführt, der natürlichsprachige Interaktion mit SAP-Systemen ermöglicht und über 80 Use Cases in S/4HANA, SuccessFactors und Ariba abdeckt.",
     impact: "Sehr hoch",
     status: "growing",
     maturityPercent: 72,
@@ -145,21 +145,21 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Business AI (Joule)",
         description:
-          "KI-Copilot integriert in S/4HANA Cloud, SuccessFactors, Ariba und Concur. Unterstuetzt natuerlichsprachige Abfragen, automatisierte Analysen, Dokumentenzusammenfassungen und intelligente Empfehlungen. Ueber 80 vordefinierte Business-AI-Szenarien verfuegbar.",
+          "KI-Copilot integriert in S/4HANA Cloud, SuccessFactors, Ariba und Concur. Unterstützt natürlichsprachige Abfragen, automatisierte Analysen, Dokumentenzusammenfassungen und intelligente Empfehlungen. Über 80 vordefinierte Business-AI-Szenarien verfügbar.",
         available: true,
         module: "SAP BTP / S/4HANA Cloud",
       },
       {
         name: "SAP AI Core & AI Launchpad",
         description:
-          "Managed Runtime fuer das Training, Deployment und Monitoring von KI-Modellen auf der SAP Business Technology Platform. Unterstuetzt Open-Source-Modelle, eigene Modelle und SAP-eigene Foundation Models.",
+          "Managed Runtime für das Training, Deployment und Monitoring von KI-Modellen auf der SAP Business Technology Platform. Unterstützt Open-Source-Modelle, eigene Modelle und SAP-eigene Foundation Models.",
         available: true,
         module: "SAP BTP",
       },
       {
         name: "SAP Business Data Cloud mit AI",
         description:
-          "Integration von Generative AI in die SAP Business Data Cloud fuer natuerlichsprachige Datenexploration und automatische Insight-Generierung auf Basis von SAP- und Drittanbieter-Daten.",
+          "Integration von Generative AI in die SAP Business Data Cloud für natürlichsprachige Datenexploration und automatische Insight-Generierung auf Basis von SAP- und Drittanbieter-Daten.",
         available: true,
         module: "SAP Datasphere",
       },
@@ -168,44 +168,44 @@ export const trends: TechTrend[] = [
       {
         name: "Microsoft Copilot / Azure OpenAI Service",
         description:
-          "Enterprise-KI mit GPT-4-Integration in Microsoft 365, Dynamics 365 und Azure. Copilot Studio ermoeglicht die Erstellung eigener KI-Agenten.",
+          "Enterprise-KI mit GPT-4-Integration in Microsoft 365, Dynamics 365 und Azure. Copilot Studio ermöglicht die Erstellung eigener KI-Agenten.",
         vendor: "Microsoft",
       },
       {
         name: "Google Gemini for Workspace & Vertex AI",
         description:
-          "Gemini-Modelle integriert in Google Workspace und als API ueber Vertex AI fuer kundenspezifische KI-Anwendungen.",
+          "Gemini-Modelle integriert in Google Workspace und als API über Vertex AI für kundenspezifische KI-Anwendungen.",
         vendor: "Google",
       },
       {
         name: "AWS Bedrock",
         description:
-          "Managed Service fuer Foundation Models (Claude, Llama, Titan) mit Enterprise-Features wie Guardrails und Fine-Tuning.",
+          "Managed Service für Foundation Models (Claude, Llama, Titan) mit Enterprise-Features wie Guardrails und Fine-Tuning.",
         vendor: "Amazon",
       },
     ],
     keyBenefits: [
-      "Bis zu 40% Produktivitaetssteigerung in Wissensarbeit",
+      "Bis zu 40% Produktivitätssteigerung in Wissensarbeit",
       "Automatisierte Dokumentenverarbeitung und Klassifizierung",
-      "Natuerlichsprachige System-Interaktion",
-      "Beschleunigte Entscheidungsfindung durch KI-gestuetzte Analysen",
+      "Natürlichsprachige System-Interaktion",
+      "Beschleunigte Entscheidungsfindung durch KI-gestützte Analysen",
     ],
     useCases: [
       "Automatisierte Rechnungsverarbeitung",
       "Intelligente Lieferantenauswahl",
-      "Code-Generierung fuer ABAP und Fiori",
+      "Code-Generierung für ABAP und Fiori",
       "Automatisierte Berichterstellung",
-      "Chatbot fuer HR-Self-Services",
+      "Chatbot für HR-Self-Services",
     ],
     icon: "brain",
-    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Professional Services"],
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgüter", "Professional Services"],
   },
   {
     id: "agentic-ai",
     title: "Agentic AI & Autonome Systeme",
     category: "KI & Machine Learning",
     description:
-      "KI-Agenten handeln eigenstaendig und orchestrieren komplexe, mehrstufige Aufgaben. Multi-Agent-Systeme koordinieren sich untereinander und fuehren End-to-End-Prozesse ohne menschliches Eingreifen aus. Gartner prognostiziert, dass bis 2028 mindestens 15% der taeglichen Arbeitsentscheidungen von Agentic AI getroffen werden. SAP plant mit Joule Agents eigene autonome Agenten, die prozessuebergreifend in der SAP-Landschaft agieren.",
+      "KI-Agenten handeln eigenständig und orchestrieren komplexe, mehrstufige Aufgaben. Multi-Agent-Systeme koordinieren sich untereinander und führen End-to-End-Prozesse ohne menschliches Eingreifen aus. Gartner prognostiziert, dass bis 2028 mindestens 15% der täglichen Arbeitsentscheidungen von Agentic AI getroffen werden. SAP plant mit Joule Agents eigene autonome Agenten, die prozessübergreifend in der SAP-Landschaft agieren.",
     impact: "Sehr hoch",
     status: "emerging",
     maturityPercent: 35,
@@ -218,7 +218,7 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Joule Collaborative Agents",
         description:
-          "Autonome KI-Agenten innerhalb des SAP-Oekosystems, die prozessuebergreifend agieren. Geplant fuer S/4HANA, SuccessFactors und Ariba mit der Faehigkeit, eigenstaendig Workflows auszufuehren und Genehmigungen einzuholen.",
+          "Autonome KI-Agenten innerhalb des SAP-Ökosystems, die prozessübergreifend agieren. Geplant für S/4HANA, SuccessFactors und Ariba mit der Fähigkeit, eigenständig Workflows auszuführen und Genehmigungen einzuholen.",
         available: false,
         plannedDate: "Q3 2026",
         module: "SAP BTP / S/4HANA Cloud",
@@ -226,7 +226,7 @@ export const trends: TechTrend[] = [
       {
         name: "SAP AI Agent Builder",
         description:
-          "Low-Code-Werkzeug auf der SAP BTP zum Erstellen, Testen und Deployen eigener KI-Agenten mit Zugriff auf SAP-Geschaeftsdaten und -prozesse.",
+          "Low-Code-Werkzeug auf der SAP BTP zum Erstellen, Testen und Deployen eigener KI-Agenten mit Zugriff auf SAP-Geschäftsdaten und -prozesse.",
         available: false,
         plannedDate: "Q4 2026",
         module: "SAP BTP",
@@ -236,13 +236,13 @@ export const trends: TechTrend[] = [
       {
         name: "Microsoft AutoGen / Semantic Kernel",
         description:
-          "Open-Source-Framework fuer Multi-Agent-Konversationen und autonome Task-Orchestrierung in Enterprise-Umgebungen.",
+          "Open-Source-Framework für Multi-Agent-Konversationen und autonome Task-Orchestrierung in Enterprise-Umgebungen.",
         vendor: "Microsoft",
       },
       {
         name: "LangChain / LangGraph / CrewAI",
         description:
-          "Open-Source-Frameworks fuer den Aufbau von Agenten-Workflows mit Tool-Use, Reasoning und Multi-Agent-Koordination.",
+          "Open-Source-Frameworks für den Aufbau von Agenten-Workflows mit Tool-Use, Reasoning und Multi-Agent-Koordination.",
         vendor: "Open Source",
       },
       {
@@ -253,16 +253,16 @@ export const trends: TechTrend[] = [
       },
     ],
     keyBenefits: [
-      "Vollautomatisierte End-to-End-Geschaeftsprozesse",
+      "Vollautomatisierte End-to-End-Geschäftsprozesse",
       "80% weniger manuelle Eingriffe bei Routineentscheidungen",
-      "Skalierbare Prozessautomatisierung ueber Systemgrenzen",
-      "24/7-Verfuegbarkeit fuer operative Aufgaben",
+      "Skalierbare Prozessautomatisierung über Systemgrenzen",
+      "24/7-Verfügbarkeit für operative Aufgaben",
     ],
     useCases: [
       "Automatisierte Bestellabwicklung von Anfrage bis Zahlung",
       "Intelligente Eskalation bei SLA-Verletzungen",
       "Autonome Bestandsoptimierung",
-      "Selbststaendige Fehlerbehebung in IT-Systemen",
+      "Selbstständige Fehlerbehebung in IT-Systemen",
     ],
     icon: "bot",
     industries: ["Automotive", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Logistik & Transport", "Professional Services"],
@@ -272,7 +272,7 @@ export const trends: TechTrend[] = [
     title: "Clean Core & Composable ERP",
     category: "Cloud & Infrastruktur",
     description:
-      "SAPs strategische Ausrichtung auf einen modifikationsfreien ERP-Kern ist der wichtigste Architekturtrend fuer SAP-Kunden. Clean Core bedeutet: keine Z-Entwicklungen im Kern, Side-by-Side-Erweiterungen auf der BTP, API-basierte Integration und konsequente Nutzung der SAP-Standard-Prozesse. SAP unterstuetzt die Migration mit dem Custom Code Migration Tool und dem Clean Core Dashboard. Bis 2027 sollen alle neuen S/4HANA Cloud Features nur noch im Clean-Core-Modell verfuegbar sein.",
+      "SAPs strategische Ausrichtung auf einen modifikationsfreien ERP-Kern ist der wichtigste Architekturtrend für SAP-Kunden. Clean Core bedeutet: keine Z-Entwicklungen im Kern, Side-by-Side-Erweiterungen auf der BTP, API-basierte Integration und konsequente Nutzung der SAP-Standard-Prozesse. SAP unterstützt die Migration mit dem Custom Code Migration Tool und dem Clean Core Dashboard. Bis 2027 sollen alle neuen S/4HANA Cloud Features nur noch im Clean-Core-Modell verfügbar sein.",
     impact: "Sehr hoch",
     status: "established",
     maturityPercent: 85,
@@ -285,28 +285,28 @@ export const trends: TechTrend[] = [
       {
         name: "SAP S/4HANA Cloud Public Edition",
         description:
-          "Standardisiertes Cloud-ERP mit quartalsweisen Updates, clean-core-konformem Erweiterungsmodell und Nutzung von Key-User-Extensibility oder Developer Extensibility ueber SAP BTP.",
+          "Standardisiertes Cloud-ERP mit quartalsweisen Updates, clean-core-konformem Erweiterungsmodell und Nutzung von Key-User-Extensibility oder Developer Extensibility über SAP BTP.",
         available: true,
         module: "S/4HANA Cloud",
       },
       {
         name: "SAP S/4HANA Cloud Private Edition (RISE)",
         description:
-          "Managed Private Cloud mit Migrationspfad fuer bestehende On-Premise-Kunden. Ermoeglicht schrittweisen Uebergang zu Clean Core mit Custom Code Analyse und Modernisierung.",
+          "Managed Private Cloud mit Migrationspfad für bestehende On-Premise-Kunden. Ermöglicht schrittweisen Übergang zu Clean Core mit Custom Code Analyse und Modernisierung.",
         available: true,
         module: "RISE with SAP",
       },
       {
         name: "SAP Build (Apps, Process Automation, Work Zone)",
         description:
-          "Low-Code/No-Code-Suite fuer Erweiterungen des Clean Core. Umfasst App-Entwicklung, Prozessautomatisierung und ein zentrales Arbeitsportal ohne Kernmodifikationen.",
+          "Low-Code/No-Code-Suite für Erweiterungen des Clean Core. Umfasst App-Entwicklung, Prozessautomatisierung und ein zentrales Arbeitsportal ohne Kernmodifikationen.",
         available: true,
         module: "SAP BTP",
       },
       {
         name: "SAP Cloud ALM",
         description:
-          "Application Lifecycle Management fuer die Cloud mit Clean Core Dashboard, Custom Code Analyse und Fit-to-Standard-Workshops.",
+          "Application Lifecycle Management für die Cloud mit Clean Core Dashboard, Custom Code Analyse und Fit-to-Standard-Workshops.",
         available: true,
         module: "SAP Cloud ALM",
       },
@@ -316,7 +316,7 @@ export const trends: TechTrend[] = [
       "85% weniger Upgrade-Aufwand durch standardisierten Kern",
       "Schnellere Innovationszyklen mit quartalsweisen Cloud-Updates",
       "Signifikant geringere Total Cost of Ownership",
-      "Zukunftssichere Architektur fuer KI und Automatisierung",
+      "Zukunftssichere Architektur für KI und Automatisierung",
     ],
     useCases: [
       "Migration von ECC-Eigenentwicklungen auf BTP-Erweiterungen",
@@ -325,14 +325,14 @@ export const trends: TechTrend[] = [
       "Custom Code Remediation mit ABAP Test Cockpit",
     ],
     icon: "layers",
-    industries: ["Automotive", "Chemie & Pharma", "Energie & Versorgung", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Logistik & Transport", "Oeffentlicher Sektor", "Gesundheitswesen", "Telekommunikation", "Professional Services"],
+    industries: ["Automotive", "Chemie & Pharma", "Energie & Versorgung", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgüter", "Logistik & Transport", "Öffentlicher Sektor", "Gesundheitswesen", "Telekommunikation", "Professional Services"],
   },
   {
     id: "data-fabric",
     title: "Data Fabric & Data Mesh",
     category: "Daten & Analytics",
     description:
-      "Moderne Datenarchitekturen brechen Datensilos auf und verbinden verteilte Quellen ueber eine einheitliche Governance-Schicht. Data Fabric automatisiert Datenintegration und -management mittels Metadaten und KI, waehrend Data Mesh die dezentrale Datenverantwortung bei Domain-Teams verankert. SAP Datasphere ist SAPs Antwort auf diese Trends und fungiert als Business Data Fabric mit semantischer Schicht ueber SAP- und Non-SAP-Daten.",
+      "Moderne Datenarchitekturen brechen Datensilos auf und verbinden verteilte Quellen über eine einheitliche Governance-Schicht. Data Fabric automatisiert Datenintegration und -management mittels Metadaten und KI, während Data Mesh die dezentrale Datenverantwortung bei Domain-Teams verankert. SAP Datasphere ist SAPs Antwort auf diese Trends und fungiert als Business Data Fabric mit semantischer Schicht über SAP- und Non-SAP-Daten.",
     impact: "Hoch",
     status: "growing",
     maturityPercent: 58,
@@ -345,28 +345,28 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Datasphere",
         description:
-          "Business Data Fabric mit semantischer Schicht, die SAP-Geschaeftssemantik automatisch auf Daten uebertraegt. Unterstuetzt Datenvirtualisierung, Replikation und Federation ueber 100+ vordefinierte Konnektoren.",
+          "Business Data Fabric mit semantischer Schicht, die SAP-Geschäftssemantik automatisch auf Daten überträgt. Unterstützt Datenvirtualisierung, Replikation und Federation über 100+ vordefinierte Konnektoren.",
         available: true,
         module: "SAP BTP",
       },
       {
         name: "SAP Master Data Governance (MDG)",
         description:
-          "Zentrale Stammdatenverwaltung fuer Material, Lieferant, Kunde, Finanz- und kundenspezifische Objekte mit Workflow-basierter Governance und Datenqualitaetssicherung.",
+          "Zentrale Stammdatenverwaltung für Material, Lieferant, Kunde, Finanz- und kundenspezifische Objekte mit Workflow-basierter Governance und Datenqualitätssicherung.",
         available: true,
         module: "S/4HANA / MDG",
       },
       {
         name: "SAP Analytics Cloud (SAC)",
         description:
-          "Cloud-Analytics-Plattform mit BI, Planung, Predictive Analytics und Integration in SAP Datasphere als semantische Schicht fuer Self-Service-Analytics.",
+          "Cloud-Analytics-Plattform mit BI, Planung, Predictive Analytics und Integration in SAP Datasphere als semantische Schicht für Self-Service-Analytics.",
         available: true,
         module: "SAP Analytics Cloud",
       },
       {
         name: "SAP Data Intelligence Cloud",
         description:
-          "Data-Orchestrierung und ML-Pipeline-Management fuer komplexe Datenlandschaften mit Kubernetes-basierter Architektur.",
+          "Data-Orchestrierung und ML-Pipeline-Management für komplexe Datenlandschaften mit Kubernetes-basierter Architektur.",
         available: true,
         module: "SAP BTP",
       },
@@ -375,13 +375,13 @@ export const trends: TechTrend[] = [
       {
         name: "Databricks Lakehouse Platform",
         description:
-          "Einheitliche Analytics-Plattform mit Data Lake, Data Warehouse, Unity Catalog und Delta Lake fuer ACID-konforme Datenverarbeitung.",
+          "Einheitliche Analytics-Plattform mit Data Lake, Data Warehouse, Unity Catalog und Delta Lake für ACID-konforme Datenverarbeitung.",
         vendor: "Databricks",
       },
       {
         name: "Snowflake Data Cloud",
         description:
-          "Cloud-Data-Warehouse mit Data Sharing, Marketplace und nativer Unterstuetzung fuer strukturierte und semi-strukturierte Daten.",
+          "Cloud-Data-Warehouse mit Data Sharing, Marketplace und nativer Unterstützung für strukturierte und semi-strukturierte Daten.",
         vendor: "Snowflake",
       },
       {
@@ -392,26 +392,26 @@ export const trends: TechTrend[] = [
       },
     ],
     keyBenefits: [
-      "Einheitliche Datensicht ueber 100+ Quellsysteme",
+      "Einheitliche Datensicht über 100+ Quellsysteme",
       "60% schnellere Time-to-Insight durch Self-Service-Analytics",
-      "Automatisierte Datenqualitaetssicherung",
+      "Automatisierte Datenqualitätssicherung",
       "Demokratisierung des Datenzugangs im Unternehmen",
     ],
     useCases: [
-      "Unternehmensweites Reporting ueber SAP und Non-SAP",
+      "Unternehmensweites Reporting über SAP und Non-SAP",
       "Echtzeitanalyse von Lieferkettendaten",
       "Aufbau eines Enterprise Data Catalog",
-      "KI-gestuetzte Datenqualitaetsmonitoring",
+      "KI-gestützte Datenqualitätsmonitoring",
     ],
     icon: "database",
-    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Logistik & Transport", "Telekommunikation"],
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgüter", "Logistik & Transport", "Telekommunikation"],
   },
   {
     id: "hyperautomation",
     title: "Hyperautomation & Process Mining",
     category: "Automatisierung",
     description:
-      "Hyperautomation kombiniert RPA, KI, Process Mining, Low-Code und iPaaS zu einer umfassenden Automatisierungsstrategie. Gartner zaehlt Hyperautomation zu den Top-Technologietrends. SAP Signavio liefert mit Process Mining und Process Management die analytische Grundlage, waehrend SAP Build Process Automation die Ausfuehrung uebernimmt. Celonis bleibt der staerkste Wettbewerber im Process-Mining-Segment.",
+      "Hyperautomation kombiniert RPA, KI, Process Mining, Low-Code und iPaaS zu einer umfassenden Automatisierungsstrategie. Gartner zählt Hyperautomation zu den Top-Technologietrends. SAP Signavio liefert mit Process Mining und Process Management die analytische Grundlage, während SAP Build Process Automation die Ausführung übernimmt. Celonis bleibt der stärkste Wettbewerber im Process-Mining-Segment.",
     impact: "Hoch",
     status: "growing",
     maturityPercent: 65,
@@ -431,14 +431,14 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Build Process Automation",
         description:
-          "Low-Code-RPA- und Workflow-Engine mit ueber 300 vorgefertigten Bots und Workflows fuer SAP-Szenarien. Unterstuetzt UI- und API-basierte Automatisierung.",
+          "Low-Code-RPA- und Workflow-Engine mit über 300 vorgefertigten Bots und Workflows für SAP-Szenarien. Unterstützt UI- und API-basierte Automatisierung.",
         available: true,
         module: "SAP BTP",
       },
       {
         name: "SAP Intelligent Robotic Process Automation",
         description:
-          "Attended und Unattended Bots fuer die Automatisierung repetitiver Aufgaben in SAP GUI, Fiori und Drittanwendungen.",
+          "Attended und Unattended Bots für die Automatisierung repetitiver Aufgaben in SAP GUI, Fiori und Drittanwendungen.",
         available: true,
         module: "SAP BTP",
       },
@@ -447,43 +447,43 @@ export const trends: TechTrend[] = [
       {
         name: "Celonis Execution Management System",
         description:
-          "Marktfuehrende Process-Mining-Plattform mit Process Intelligence, Action Engine und direkter SAP-Integration fuer datengetriebene Prozessoptimierung.",
+          "Marktführende Process-Mining-Plattform mit Process Intelligence, Action Engine und direkter SAP-Integration für datengetriebene Prozessoptimierung.",
         vendor: "Celonis",
       },
       {
         name: "UiPath Business Automation Platform",
         description:
-          "Enterprise-RPA-Plattform mit KI-gestuetzter Automatisierung, Document Understanding und Process Mining.",
+          "Enterprise-RPA-Plattform mit KI-gestützter Automatisierung, Document Understanding und Process Mining.",
         vendor: "UiPath",
       },
       {
         name: "Microsoft Power Automate",
         description:
-          "Cloud-basierte RPA- und Workflow-Plattform integriert in Microsoft 365 mit ueber 1.000 Konnektoren.",
+          "Cloud-basierte RPA- und Workflow-Plattform integriert in Microsoft 365 mit über 1.000 Konnektoren.",
         vendor: "Microsoft",
       },
     ],
     keyBenefits: [
       "Bis zu 60% Durchlaufzeitreduktion in Kernprozessen",
-      "Echtzeit-Prozesstransparenz ueber die gesamte Wertschoepfungskette",
+      "Echtzeit-Prozesstransparenz über die gesamte Wertschöpfungskette",
       "ROI innerhalb von 6-12 Monaten durch Quick Wins",
       "Datenbasierte Identifikation von Automatisierungspotenzial",
     ],
     useCases: [
       "Order-to-Cash-Prozessoptimierung",
       "Purchase-to-Pay-Automatisierung",
-      "Automatisierte Rechnungspruefung und -freigabe",
+      "Automatisierte Rechnungsprüfung und -freigabe",
       "Compliance-Monitoring in Echtzeit",
     ],
     icon: "workflow",
-    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Logistik & Transport", "Professional Services"],
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgüter", "Logistik & Transport", "Professional Services"],
   },
   {
     id: "zero-trust",
     title: "Zero Trust Security & Cyber Resilience",
     category: "Sicherheit",
     description:
-      "Zero Trust eliminiert implizites Vertrauen in Netzwerken und verlangt kontinuierliche Verifizierung fuer jeden Zugriff. Mit NIS2 (EU-Richtlinie seit Oktober 2024) und dem IT-Sicherheitsgesetz 2.0 muessen Unternehmen ihre Cyber-Resilienz massiv erhoehen. SAP bietet mit Cloud Identity Services, Enterprise Threat Detection und dem SAP Trust Center umfassende Sicherheitsloesungen. Die EU-Verordnung DORA (Digital Operational Resilience Act) stellt zusaetzliche Anforderungen an den Finanzsektor.",
+      "Zero Trust eliminiert implizites Vertrauen in Netzwerken und verlangt kontinuierliche Verifizierung für jeden Zugriff. Mit NIS2 (EU-Richtlinie seit Oktober 2024) und dem IT-Sicherheitsgesetz 2.0 müssen Unternehmen ihre Cyber-Resilienz massiv erhöhen. SAP bietet mit Cloud Identity Services, Enterprise Threat Detection und dem SAP Trust Center umfassende Sicherheitslösungen. Die EU-Verordnung DORA (Digital Operational Resilience Act) stellt zusätzliche Anforderungen an den Finanzsektor.",
     impact: "Sehr hoch",
     status: "established",
     maturityPercent: 78,
@@ -496,21 +496,21 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Cloud Identity Services (IAS/IPS)",
         description:
-          "Identity Authentication Service (IAS) und Identity Provisioning Service (IPS) fuer Single Sign-On, Multi-Faktor-Authentifizierung und automatisierte Benutzer-Provisionierung ueber SCIM.",
+          "Identity Authentication Service (IAS) und Identity Provisioning Service (IPS) für Single Sign-On, Multi-Faktor-Authentifizierung und automatisierte Benutzer-Provisionierung über SCIM.",
         available: true,
         module: "SAP BTP Security",
       },
       {
         name: "SAP Enterprise Threat Detection (ETD)",
         description:
-          "SIEM-Loesung speziell fuer SAP-Systeme zur Echtzeit-Erkennung von Angriffen, Anomalien und verdaechtigen Aktivitaeten in SAP-Logs.",
+          "SIEM-Lösung speziell für SAP-Systeme zur Echtzeit-Erkennung von Angriffen, Anomalien und verdächtigen Aktivitäten in SAP-Logs.",
         available: true,
         module: "SAP Security",
       },
       {
         name: "SAP Cloud Connector & Private Link",
         description:
-          "Sichere Konnektivitaet zwischen SAP BTP und On-Premise-Systemen ueber verschluesselte Tunnel ohne eingehende Firewall-Oeffnungen.",
+          "Sichere Konnektivität zwischen SAP BTP und On-Premise-Systemen über verschlüsselte Tunnel ohne eingehende Firewall-Öffnungen.",
         available: true,
         module: "SAP BTP Connectivity",
       },
@@ -519,13 +519,13 @@ export const trends: TechTrend[] = [
       {
         name: "Zscaler Zero Trust Exchange",
         description:
-          "Cloud-native Zero-Trust-Plattform fuer sicheren Internet-, SaaS- und Private-App-Zugriff ohne traditionelle VPNs.",
+          "Cloud-native Zero-Trust-Plattform für sicheren Internet-, SaaS- und Private-App-Zugriff ohne traditionelle VPNs.",
         vendor: "Zscaler",
       },
       {
         name: "CrowdStrike Falcon / Palo Alto Prisma",
         description:
-          "Endpoint Detection and Response (EDR) und Cloud Security Posture Management (CSPM) fuer umfassende Cyber-Abwehr.",
+          "Endpoint Detection and Response (EDR) und Cloud Security Posture Management (CSPM) für umfassende Cyber-Abwehr.",
         vendor: "CrowdStrike / Palo Alto",
       },
       {
@@ -536,7 +536,7 @@ export const trends: TechTrend[] = [
       },
     ],
     keyBenefits: [
-      "Reduzierte Angriffsflaeche durch Mikrosegmentierung",
+      "Reduzierte Angriffsfläche durch Mikrosegmentierung",
       "NIS2- und DORA-Compliance sichergestellt",
       "Echtzeit-Bedrohungserkennung in SAP-Systemen",
       "Granulare, kontextbasierte Zugriffskontrolle",
@@ -545,17 +545,17 @@ export const trends: TechTrend[] = [
       "Absicherung hybrider SAP-Landschaften (Cloud + On-Premise)",
       "NIS2-konforme Zugriffsverwaltung",
       "SAP-Sicherheitsmonitoring in Echtzeit",
-      "Privileged Access Management fuer SAP-Basis",
+      "Privileged Access Management für SAP-Basis",
     ],
     icon: "shield",
-    industries: ["Finanzdienstleistungen", "Oeffentlicher Sektor", "Gesundheitswesen", "Energie & Versorgung", "Telekommunikation"],
+    industries: ["Finanzdienstleistungen", "Öffentlicher Sektor", "Gesundheitswesen", "Energie & Versorgung", "Telekommunikation"],
   },
   {
     id: "green-it",
     title: "Green IT & ESG-Compliance",
     category: "Nachhaltigkeit",
     description:
-      "Die EU Corporate Sustainability Reporting Directive (CSRD) verpflichtet ab 2024 schrittweise ueber 50.000 Unternehmen in der EU zu detailliertem ESG-Reporting nach den European Sustainability Reporting Standards (ESRS). Carbon Accounting, Scope-1/2/3-Emissionserfassung und Lieferketten-Transparenz werden zur Pflicht. SAP bietet mit dem Sustainability Control Tower und dem geplanten Green Ledger umfassende Loesungen fuer die Integration von Nachhaltigkeit in Finanzprozesse.",
+      "Die EU Corporate Sustainability Reporting Directive (CSRD) verpflichtet ab 2024 schrittweise über 50.000 Unternehmen in der EU zu detailliertem ESG-Reporting nach den European Sustainability Reporting Standards (ESRS). Carbon Accounting, Scope-1/2/3-Emissionserfassung und Lieferketten-Transparenz werden zur Pflicht. SAP bietet mit dem Sustainability Control Tower und dem geplanten Green Ledger umfassende Lösungen für die Integration von Nachhaltigkeit in Finanzprozesse.",
     impact: "Hoch",
     status: "growing",
     maturityPercent: 48,
@@ -568,21 +568,21 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Sustainability Control Tower",
         description:
-          "Zentrale Plattform fuer ESG-Reporting, Carbon Footprint Tracking (Scope 1, 2, 3), Nachhaltigkeitskennzahlen und regulatorische Berichterstattung nach CSRD/ESRS.",
+          "Zentrale Plattform für ESG-Reporting, Carbon Footprint Tracking (Scope 1, 2, 3), Nachhaltigkeitskennzahlen und regulatorische Berichterstattung nach CSRD/ESRS.",
         available: true,
         module: "SAP Sustainability",
       },
       {
         name: "SAP Responsible Design and Production",
         description:
-          "Loesung fuer Produktkonformitaet, erweiterte Herstellerverantwortung (EPR) und Kreislaufwirtschaft mit Tracking von Materialzusammensetzungen.",
+          "Lösung für Produktkonformität, erweiterte Herstellerverantwortung (EPR) und Kreislaufwirtschaft mit Tracking von Materialzusammensetzungen.",
         available: true,
         module: "SAP Sustainability",
       },
       {
         name: "SAP Green Ledger",
         description:
-          "Integrierte Nachhaltigkeitsbuchhaltung im Hauptbuch fuer automatisiertes Carbon Accounting parallel zur Finanzbuchhaltung. Jede Finanztransaktion erhaelt eine CO2-Bewertung.",
+          "Integrierte Nachhaltigkeitsbuchhaltung im Hauptbuch für automatisiertes Carbon Accounting parallel zur Finanzbuchhaltung. Jede Finanztransaktion erhält eine CO2-Bewertung.",
         available: false,
         plannedDate: "2027",
         module: "S/4HANA Cloud",
@@ -592,13 +592,13 @@ export const trends: TechTrend[] = [
       {
         name: "Persefoni / Watershed",
         description:
-          "Spezialisierte Carbon-Accounting-Plattformen fuer Scope-1/2/3-Emissionserfassung mit automatisierter Datensammlung und CDP-Reporting.",
+          "Spezialisierte Carbon-Accounting-Plattformen für Scope-1/2/3-Emissionserfassung mit automatisierter Datensammlung und CDP-Reporting.",
         vendor: "Persefoni / Watershed",
       },
       {
         name: "Sphera / Ecoinvent",
         description:
-          "LCA-Datenbanken und Product Carbon Footprint Tools fuer detaillierte Lebenszyklusanalysen.",
+          "LCA-Datenbanken und Product Carbon Footprint Tools für detaillierte Lebenszyklusanalysen.",
         vendor: "Sphera",
       },
     ],
@@ -615,14 +615,14 @@ export const trends: TechTrend[] = [
       "Green Procurement und Lieferantenbewertung",
     ],
     icon: "leaf",
-    industries: ["Automotive", "Chemie & Pharma", "Energie & Versorgung", "Fertigung & Maschinenbau", "Handel & Konsumgueter", "Logistik & Transport"],
+    industries: ["Automotive", "Chemie & Pharma", "Energie & Versorgung", "Fertigung & Maschinenbau", "Handel & Konsumgüter", "Logistik & Transport"],
   },
   {
     id: "composable-integration",
     title: "API-First & Event-Driven Architecture",
     category: "Integration",
     description:
-      "Moderne Integrationsarchitekturen basieren auf APIs, Events und Microservices fuer Echtzeit-Datenaustausch. SAP Integration Suite ist SAPs zentrale iPaaS-Loesung und deckt Cloud Integration (CPI), API Management, Open Connectors, Integration Advisor und Trading Partner Management ab. Event-driven Architecture ueber SAP Event Mesh und Advanced Event Mesh (basierend auf Solace) ermoeglicht asynchrone, lose gekoppelte Systemlandschaften.",
+      "Moderne Integrationsarchitekturen basieren auf APIs, Events und Microservices für Echtzeit-Datenaustausch. SAP Integration Suite ist SAPs zentrale iPaaS-Lösung und deckt Cloud Integration (CPI), API Management, Open Connectors, Integration Advisor und Trading Partner Management ab. Event-driven Architecture über SAP Event Mesh und Advanced Event Mesh (basierend auf Solace) ermöglicht asynchrone, lose gekoppelte Systemlandschaften.",
     impact: "Hoch",
     status: "established",
     maturityPercent: 80,
@@ -635,21 +635,21 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Integration Suite",
         description:
-          "Umfassende iPaaS mit Cloud Integration (CPI), API Management, Open Connectors (200+ Third-Party-Adapter), Integration Advisor (KI-gestuetztes B2B-Mapping) und Migration Assessment.",
+          "Umfassende iPaaS mit Cloud Integration (CPI), API Management, Open Connectors (200+ Third-Party-Adapter), Integration Advisor (KI-gestütztes B2B-Mapping) und Migration Assessment.",
         available: true,
         module: "SAP BTP Integration",
       },
       {
         name: "SAP Advanced Event Mesh (Solace)",
         description:
-          "Enterprise-Event-Broker fuer Event Streaming, Event Mesh und Event Management. Unterstuetzt AMQP, MQTT, REST und JMS fuer Multi-Cloud- und Hybrid-Szenarien.",
+          "Enterprise-Event-Broker für Event Streaming, Event Mesh und Event Management. Unterstützt AMQP, MQTT, REST und JMS für Multi-Cloud- und Hybrid-Szenarien.",
         available: true,
         module: "SAP BTP",
       },
       {
         name: "SAP Graph (Beta)",
         description:
-          "Einheitliche API ueber alle SAP-Geschaeftsobjekte hinweg. Ermoeglicht den Zugriff auf SAP-Daten ueber eine einzelne, konsistente RESTful API mit automatischem Data Joining.",
+          "Einheitliche API über alle SAP-Geschäftsobjekte hinweg. Ermöglicht den Zugriff auf SAP-Daten über eine einzelne, konsistente RESTful API mit automatischem Data Joining.",
         available: true,
         module: "SAP BTP",
       },
@@ -670,31 +670,31 @@ export const trends: TechTrend[] = [
       {
         name: "Confluent (Apache Kafka)",
         description:
-          "Data-Streaming-Plattform basierend auf Apache Kafka fuer Event-Driven Architecture in Echtzeit.",
+          "Data-Streaming-Plattform basierend auf Apache Kafka für Event-Driven Architecture in Echtzeit.",
         vendor: "Confluent",
       },
     ],
     keyBenefits: [
-      "Echtzeit-Datensynchronisation ueber alle Systeme",
+      "Echtzeit-Datensynchronisation über alle Systeme",
       "Flexible, lose gekoppelte Systemlandschaft",
       "50% reduzierte Integrationskosten durch Wiederverwendung",
-      "Zukunftssichere Architektur fuer Composable Enterprise",
+      "Zukunftssichere Architektur für Composable Enterprise",
     ],
     useCases: [
       "SAP-zu-Non-SAP-Echtzeit-Integration",
       "B2B-Integration mit Lieferanten und Partnern",
-      "Event-basierte Bestandsaktualisierung ueber Systeme",
-      "API-Gateway fuer SAP-Backend-Services",
+      "Event-basierte Bestandsaktualisierung über Systeme",
+      "API-Gateway für SAP-Backend-Services",
     ],
     icon: "plug",
-    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Logistik & Transport", "Telekommunikation"],
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgüter", "Logistik & Transport", "Telekommunikation"],
   },
   {
     id: "digital-twin",
     title: "Digital Twins & Industrie 4.0",
     category: "Automatisierung",
     description:
-      "Digitale Zwillinge bilden physische Assets, Produktionslinien und gesamte Lieferketten virtuell ab. In Kombination mit IoT-Sensordaten, KI und Echtzeit-Analytics ermoglichen sie Predictive Maintenance, Produktionsoptimierung und What-if-Simulationen. SAP Digital Manufacturing und SAP Asset Performance Management liefern die Grundlage fuer industrielle Digital-Twin-Szenarien. Der Markt fuer Digital Twins waechst laut MarketsandMarkets auf 110 Milliarden USD bis 2028.",
+      "Digitale Zwillinge bilden physische Assets, Produktionslinien und gesamte Lieferketten virtuell ab. In Kombination mit IoT-Sensordaten, KI und Echtzeit-Analytics ermöglichen sie Predictive Maintenance, Produktionsoptimierung und What-if-Simulationen. SAP Digital Manufacturing und SAP Asset Performance Management liefern die Grundlage für industrielle Digital-Twin-Szenarien. Der Markt für Digital Twins wächst laut MarketsandMarkets auf 110 Milliarden USD bis 2028.",
     impact: "Hoch",
     status: "emerging",
     maturityPercent: 40,
@@ -707,21 +707,21 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Digital Manufacturing (DM)",
         description:
-          "Cloud-MES-Loesung mit Digital-Twin-Faehigkeiten, Echtzeit-Produktionssteuerung, Qualitaetsmanagement und Integration in S/4HANA Manufacturing.",
+          "Cloud-MES-Lösung mit Digital-Twin-Fähigkeiten, Echtzeit-Produktionssteuerung, Qualitätsmanagement und Integration in S/4HANA Manufacturing.",
         available: true,
         module: "SAP Digital Supply Chain",
       },
       {
         name: "SAP Asset Performance Management (APM)",
         description:
-          "Predictive Maintenance und Asset Health Monitoring auf Basis von IoT-Sensordaten mit Machine-Learning-gestuetzter Ausfallvorhersage.",
+          "Predictive Maintenance und Asset Health Monitoring auf Basis von IoT-Sensordaten mit Machine-Learning-gestützter Ausfallvorhersage.",
         available: true,
         module: "SAP Digital Supply Chain",
       },
       {
         name: "SAP Product Lifecycle Management (PLM)",
         description:
-          "Produktlebenszyklusmanagement mit Engineering Change Management und Integration in Digital-Twin-Modelle fuer virtuelle Produktentwicklung.",
+          "Produktlebenszyklusmanagement mit Engineering Change Management und Integration in Digital-Twin-Modelle für virtuelle Produktentwicklung.",
         available: true,
         module: "S/4HANA",
       },
@@ -730,19 +730,19 @@ export const trends: TechTrend[] = [
       {
         name: "Siemens Xcelerator / MindSphere",
         description:
-          "Industrielle IoT- und Digital-Twin-Plattform mit umfassendem CAD/CAM/PLM-Oekosystem und Open-API-Architektur.",
+          "Industrielle IoT- und Digital-Twin-Plattform mit umfassendem CAD/CAM/PLM-Ökosystem und Open-API-Architektur.",
         vendor: "Siemens",
       },
       {
         name: "PTC ThingWorx / Creo",
         description:
-          "IoT-Plattform mit AR-Integration (Vuforia) fuer industrielle Digital Twins und Remote Assistance.",
+          "IoT-Plattform mit AR-Integration (Vuforia) für industrielle Digital Twins und Remote Assistance.",
         vendor: "PTC",
       },
       {
         name: "Microsoft Azure Digital Twins",
         description:
-          "Cloud-Plattform fuer die Erstellung von Digital-Twin-Graphen mit DTDL (Digital Twins Definition Language) und Azure IoT Hub.",
+          "Cloud-Plattform für die Erstellung von Digital-Twin-Graphen mit DTDL (Digital Twins Definition Language) und Azure IoT Hub.",
         vendor: "Microsoft",
       },
     ],
@@ -750,10 +750,10 @@ export const trends: TechTrend[] = [
       "30% Reduktion ungeplanter Ausfallzeiten durch Predictive Maintenance",
       "Virtuelle Produktionsoptimierung vor realer Umsetzung",
       "Beschleunigte Marktreife durch digitale Simulation",
-      "Echtzeit-Visibilitaet ueber alle Assets",
+      "Echtzeit-Visibilität über alle Assets",
     ],
     useCases: [
-      "Predictive Maintenance fuer Produktionsanlagen",
+      "Predictive Maintenance für Produktionsanlagen",
       "Virtuelle Inbetriebnahme neuer Fertigungslinien",
       "Echtzeit-Produktionssteuerung und -optimierung",
       "Supply-Chain-Simulation und Szenarioplanung",
@@ -766,7 +766,7 @@ export const trends: TechTrend[] = [
     title: "Quantum Computing Readiness",
     category: "KI & Machine Learning",
     description:
-      "Quantencomputer versprechen exponentielle Beschleunigung fuer Optimierungsprobleme, Materialforschung und Kryptographie. IBM plant bis 2029 einen fehlerkorrigierten Quantencomputer mit 100.000 Qubits. Fuer SAP-Kunden ist vor allem die Quantum-Ready-Kryptographie relevant: NIST hat 2024 die ersten Post-Quantum-Kryptographie-Standards veroeffentlicht (ML-KEM, ML-DSA). SAP hat bisher keine eigene Quantum-Loesung, die Vorbereitung auf Post-Quantum-Sicherheit ist jedoch kritisch.",
+      "Quantencomputer versprechen exponentielle Beschleunigung für Optimierungsprobleme, Materialforschung und Kryptographie. IBM plant bis 2029 einen fehlerkorrigierten Quantencomputer mit 100.000 Qubits. Für SAP-Kunden ist vor allem die Quantum-Ready-Kryptographie relevant: NIST hat 2024 die ersten Post-Quantum-Kryptographie-Standards veröffentlicht (ML-KEM, ML-DSA). SAP hat bisher keine eigene Quantum-Lösung, die Vorbereitung auf Post-Quantum-Sicherheit ist jedoch kritisch.",
     impact: "Niedrig",
     status: "future",
     maturityPercent: 12,
@@ -780,33 +780,33 @@ export const trends: TechTrend[] = [
       {
         name: "IBM Qiskit / IBM Quantum Network",
         description:
-          "Fuehrendes Quantum-Computing-Oekosystem mit 1.121-Qubit-Condor-Prozessor, Qiskit Runtime und Cloud-Zugang fuer Unternehmen.",
+          "Führendes Quantum-Computing-Ökosystem mit 1.121-Qubit-Condor-Prozessor, Qiskit Runtime und Cloud-Zugang für Unternehmen.",
         vendor: "IBM",
       },
       {
         name: "Google Quantum AI (Willow)",
         description:
-          "Quantenprozessor mit unterhalb der Fehlerschwelle liegender Fehlerkorrektur. Cloud-Zugang ueber Google Cloud.",
+          "Quantenprozessor mit unterhalb der Fehlerschwelle liegender Fehlerkorrektur. Cloud-Zugang über Google Cloud.",
         vendor: "Google",
       },
       {
         name: "Amazon Braket",
         description:
-          "AWS-Service fuer Quantum-Computing-Experimente mit Zugang zu Quantencomputern von IonQ, Rigetti und D-Wave.",
+          "AWS-Service für Quantum-Computing-Experimente mit Zugang zu Quantencomputern von IonQ, Rigetti und D-Wave.",
         vendor: "Amazon",
       },
     ],
     keyBenefits: [
-      "Loesungen fuer bisher nicht berechenbare Optimierungsprobleme",
+      "Lösungen für bisher nicht berechenbare Optimierungsprobleme",
       "Post-Quantum-Kryptographie als Sicherheitsvorsorge",
-      "Wettbewerbsvorteil durch fruehe Kompetenzentwicklung",
-      "Revolutionaere Fortschritte in Materialwissenschaft und Pharma",
+      "Wettbewerbsvorteil durch frühe Kompetenzentwicklung",
+      "Revolutionäre Fortschritte in Materialwissenschaft und Pharma",
     ],
     useCases: [
       "Supply-Chain-Optimierung mit Quantum Annealing",
       "Portfolio-Optimierung im Finanzsektor",
       "Migration zu Post-Quantum-Kryptographie (NIST-Standards)",
-      "Molekuelsimulation fuer Materialforschung",
+      "Molekülsimulation für Materialforschung",
     ],
     icon: "atom",
     industries: ["Chemie & Pharma", "Finanzdienstleistungen", "Energie & Versorgung"],
@@ -816,7 +816,7 @@ export const trends: TechTrend[] = [
     title: "Edge Computing & 5G-Integration",
     category: "Cloud & Infrastruktur",
     description:
-      "Edge Computing verlagert Rechenleistung an den Netzwerkrand fuer Echtzeit-Verarbeitung mit minimaler Latenz. In Kombination mit 5G-Campusnetzen entstehen neue Industrial-IoT-Szenarien fuer Fertigung, Logistik und Einzelhandel. SAP Edge Services ermoeglicht lokale Datenverarbeitung nahe an der Quelle mit automatischer Synchronisation in die SAP-Cloud. Der globale Edge-Computing-Markt waechst laut IDC auf ueber 300 Milliarden USD bis 2028.",
+      "Edge Computing verlagert Rechenleistung an den Netzwerkrand für Echtzeit-Verarbeitung mit minimaler Latenz. In Kombination mit 5G-Campusnetzen entstehen neue Industrial-IoT-Szenarien für Fertigung, Logistik und Einzelhandel. SAP Edge Services ermöglicht lokale Datenverarbeitung nahe an der Quelle mit automatischer Synchronisation in die SAP-Cloud. Der globale Edge-Computing-Markt wächst laut IDC auf über 300 Milliarden USD bis 2028.",
     impact: "Mittel",
     status: "growing",
     maturityPercent: 52,
@@ -829,14 +829,14 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Edge Services",
         description:
-          "Edge-Computing-Runtime fuer die lokale Datenvorverarbeitung, Filterung und Aggregation von IoT-Daten mit automatischer Cloud-Synchronisation in SAP-Systeme.",
+          "Edge-Computing-Runtime für die lokale Datenvorverarbeitung, Filterung und Aggregation von IoT-Daten mit automatischer Cloud-Synchronisation in SAP-Systeme.",
         available: true,
         module: "SAP Digital Supply Chain",
       },
       {
         name: "SAP Digital Manufacturing (Edge Deployment)",
         description:
-          "On-Premise/Edge-Deployment-Option fuer SAP Digital Manufacturing mit lokaler MES-Funktionalitaet und Offline-Faehigkeit.",
+          "On-Premise/Edge-Deployment-Option für SAP Digital Manufacturing mit lokaler MES-Funktionalität und Offline-Fähigkeit.",
         available: true,
         module: "SAP Digital Supply Chain",
       },
@@ -857,31 +857,31 @@ export const trends: TechTrend[] = [
       {
         name: "Google Distributed Cloud Edge",
         description:
-          "Google-Cloud-Services auf Edge-Hardware fuer 5G-Szenarien und lokale Datenverarbeitung.",
+          "Google-Cloud-Services auf Edge-Hardware für 5G-Szenarien und lokale Datenverarbeitung.",
         vendor: "Google",
       },
     ],
     keyBenefits: [
-      "Sub-Millisekunden-Latenz fuer Echtzeit-Anwendungen",
-      "Offline-Faehigkeit fuer produktionskritische Szenarien",
+      "Sub-Millisekunden-Latenz für Echtzeit-Anwendungen",
+      "Offline-Fähigkeit für produktionskritische Szenarien",
       "Reduzierte Bandbreitenkosten durch lokale Vorverarbeitung",
-      "Datensouveraenitaet durch lokale Verarbeitung",
+      "Datensouveränität durch lokale Verarbeitung",
     ],
     useCases: [
-      "Qualitaetskontrolle mit KI-Vision an der Produktionslinie",
+      "Qualitätskontrolle mit KI-Vision an der Produktionslinie",
       "Echtzeit-Bestandserfassung im Lager",
       "Autonome mobile Roboter in der Logistik",
-      "5G-Campusnetz fuer vernetzte Fertigung",
+      "5G-Campusnetz für vernetzte Fertigung",
     ],
     icon: "radio",
-    industries: ["Automotive", "Fertigung & Maschinenbau", "Logistik & Transport", "Handel & Konsumgueter", "Telekommunikation"],
+    industries: ["Automotive", "Fertigung & Maschinenbau", "Logistik & Transport", "Handel & Konsumgüter", "Telekommunikation"],
   },
   {
     id: "low-code",
     title: "Low-Code / No-Code & Citizen Development",
     category: "Automatisierung",
     description:
-      "Gartner prognostiziert, dass bis 2026 ueber 80% der Softwareprodukte von Nicht-Programmierern entwickelt werden. SAP Build ist SAPs Low-Code-Suite fuer die Demokratisierung der Entwicklung im SAP-Oekosystem. Citizen Developer erstellen eigenstaendig Anwendungen, Automatisierungen und Integrationen ohne tiefes Coding-Wissen. Die Governance durch Fusion Teams (IT + Fachbereich) ist entscheidend fuer den Erfolg.",
+      "Gartner prognostiziert, dass bis 2026 über 80% der Softwareprodukte von Nicht-Programmierern entwickelt werden. SAP Build ist SAPs Low-Code-Suite für die Demokratisierung der Entwicklung im SAP-Ökosystem. Citizen Developer erstellen eigenständig Anwendungen, Automatisierungen und Integrationen ohne tiefes Coding-Wissen. Die Governance durch Fusion Teams (IT + Fachbereich) ist entscheidend für den Erfolg.",
     impact: "Hoch",
     status: "established",
     maturityPercent: 75,
@@ -894,21 +894,21 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Build Apps",
         description:
-          "Visuelle Drag-and-Drop-Entwicklungsumgebung fuer Web- und Mobile-Apps mit SAP-Backend-Integration. Ehemals SAP AppGyver, jetzt vollstaendig in SAP Build integriert.",
+          "Visuelle Drag-and-Drop-Entwicklungsumgebung für Web- und Mobile-Apps mit SAP-Backend-Integration. Ehemals SAP AppGyver, jetzt vollständig in SAP Build integriert.",
         available: true,
         module: "SAP Build",
       },
       {
         name: "SAP Build Process Automation",
         description:
-          "Low-Code-Workflows und RPA-Bots fuer die Automatisierung von Geschaeftsprozessen mit vorgefertigten SAP-Szenarien.",
+          "Low-Code-Workflows und RPA-Bots für die Automatisierung von Geschäftsprozessen mit vorgefertigten SAP-Szenarien.",
         available: true,
         module: "SAP Build",
       },
       {
         name: "SAP Build Work Zone",
         description:
-          "Zentrales Arbeitsportal fuer personalisierte Aufgaben, Workflows und Business-Apps mit Integration aller SAP- und Drittanbieter-Anwendungen.",
+          "Zentrales Arbeitsportal für personalisierte Aufgaben, Workflows und Business-Apps mit Integration aller SAP- und Drittanbieter-Anwendungen.",
         available: true,
         module: "SAP Build",
       },
@@ -917,43 +917,43 @@ export const trends: TechTrend[] = [
       {
         name: "Microsoft Power Platform (Power Apps, Power Automate, Power BI)",
         description:
-          "Umfassendes Low-Code-Oekosystem mit Dataverse, AI Builder und tiefer Integration in Microsoft 365 und Dynamics.",
+          "Umfassendes Low-Code-Ökosystem mit Dataverse, AI Builder und tiefer Integration in Microsoft 365 und Dynamics.",
         vendor: "Microsoft",
       },
       {
         name: "Mendix / OutSystems",
         description:
-          "Enterprise-Low-Code-Plattformen fuer komplexe Anwendungen mit DevOps-Integration und Cloud-nativer Architektur.",
+          "Enterprise-Low-Code-Plattformen für komplexe Anwendungen mit DevOps-Integration und Cloud-nativer Architektur.",
         vendor: "Siemens / OutSystems",
       },
       {
         name: "Retool / Appsmith",
         description:
-          "Low-Code-Plattformen fuer interne Tools mit direktem Datenbankzugriff und API-Integration.",
+          "Low-Code-Plattformen für interne Tools mit direktem Datenbankzugriff und API-Integration.",
         vendor: "Retool / Appsmith",
       },
     ],
     keyBenefits: [
       "10x schnellere Applikationsentwicklung als klassisches Coding",
       "Entlastung der IT-Abteilung durch Citizen Development",
-      "Niedrigere Einstiegshuerde fuer SAP-Erweiterungen",
+      "Niedrigere Einstiegshürde für SAP-Erweiterungen",
       "Schnellere Reaktion auf Fachbereichsanforderungen",
     ],
     useCases: [
-      "Self-Service-Apps fuer Genehmigungsworkflows",
+      "Self-Service-Apps für Genehmigungsworkflows",
       "Fachbereichs-Dashboards mit SAP-Daten",
       "Mobile Datenerfassung in Produktion und Lager",
       "Automatisierte Onboarding-Prozesse",
     ],
     icon: "blocks",
-    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Oeffentlicher Sektor", "Professional Services"],
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgüter", "Öffentlicher Sektor", "Professional Services"],
   },
   {
     id: "sovereign-cloud",
     title: "Sovereign Cloud & DSGVO-Compliance",
     category: "Cloud & Infrastruktur",
     description:
-      "Datensouveraenitaet wird zum zentralen Thema fuer europaeische Unternehmen. Sovereign Cloud garantiert, dass Daten in Europa verbleiben, europaeischem Recht unterliegen und von europaeischem Personal betrieben werden. SAP bietet mit der Sovereign Cloud Edition Loesungen speziell fuer regulierte Branchen. GAIA-X als europaeische Cloud-Initiative setzt Standards fuer Datensouveraenitaet und Interoperabilitaet.",
+      "Datensouveränität wird zum zentralen Thema für europäische Unternehmen. Sovereign Cloud garantiert, dass Daten in Europa verbleiben, europäischem Recht unterliegen und von europäischem Personal betrieben werden. SAP bietet mit der Sovereign Cloud Edition Lösungen speziell für regulierte Branchen. GAIA-X als europäische Cloud-Initiative setzt Standards für Datensouveränität und Interoperabilität.",
     impact: "Hoch",
     status: "growing",
     maturityPercent: 45,
@@ -966,14 +966,14 @@ export const trends: TechTrend[] = [
       {
         name: "SAP S/4HANA Cloud, Sovereign Edition",
         description:
-          "EU-Access-kontrollierte Cloud-Umgebung mit garantierter Datenresidenz in Europa, europaeischem Betriebspersonal und erhoehten Compliance-Standards fuer regulierte Branchen.",
+          "EU-Access-kontrollierte Cloud-Umgebung mit garantierter Datenresidenz in Europa, europäischem Betriebspersonal und erhöhten Compliance-Standards für regulierte Branchen.",
         available: true,
         module: "RISE with SAP",
       },
       {
         name: "SAP Private Cloud mit EU Access",
         description:
-          "Hyperscaler-gehostete SAP-Umgebung mit EU-Access-Kontrolle, verschluesselter Datenhaltung und Einschraenkung des Zugriffs auf EU-Personal.",
+          "Hyperscaler-gehostete SAP-Umgebung mit EU-Access-Kontrolle, verschlüsselter Datenhaltung und Einschränkung des Zugriffs auf EU-Personal.",
         available: true,
         module: "RISE with SAP",
       },
@@ -982,19 +982,19 @@ export const trends: TechTrend[] = [
       {
         name: "T-Systems / Delos Cloud (SAP-zertifiziert)",
         description:
-          "Deutsche souveraene Cloud-Infrastruktur auf Basis von Microsoft Azure mit T-Systems als Datentreuhander.",
+          "Deutsche souveräne Cloud-Infrastruktur auf Basis von Microsoft Azure mit T-Systems als Datentreuhänder.",
         vendor: "T-Systems / Microsoft",
       },
       {
         name: "OVHcloud / IONOS / Open Telekom Cloud",
         description:
-          "Europaeische Cloud-Anbieter mit garantierter Datenresidenz, DSGVO-Konformitaet und C5-Zertifizierung.",
-        vendor: "Europaeische Anbieter",
+          "Europäische Cloud-Anbieter mit garantierter Datenresidenz, DSGVO-Konformität und C5-Zertifizierung.",
+        vendor: "Europäische Anbieter",
       },
     ],
     keyBenefits: [
       "100% DSGVO- und EU-Compliance garantiert",
-      "Datensouveraenitaet fuer regulierte Branchen (Finanzen, Gesundheit, oeffentliche Verwaltung)",
+      "Datensouveränität für regulierte Branchen (Finanzen, Gesundheit, öffentliche Verwaltung)",
       "Schutz vor extraterritorialen Datenzugriffen (CLOUD Act)",
       "GAIA-X-konforme Cloud-Architektur",
     ],
@@ -1002,17 +1002,17 @@ export const trends: TechTrend[] = [
       "Public-Sector-SAP-Systeme mit BSI C5-Attestierung",
       "Finanzdienstleister mit BAIT/DORA-Anforderungen",
       "Gesundheitswesen mit Patientendaten (KHZG)",
-      "KRITIS-Unternehmen mit erhoehten Sicherheitsanforderungen",
+      "KRITIS-Unternehmen mit erhöhten Sicherheitsanforderungen",
     ],
     icon: "cloud",
-    industries: ["Finanzdienstleistungen", "Oeffentlicher Sektor", "Gesundheitswesen", "Energie & Versorgung"],
+    industries: ["Finanzdienstleistungen", "Öffentlicher Sektor", "Gesundheitswesen", "Energie & Versorgung"],
   },
   {
     id: "composable-commerce",
     title: "Composable Commerce & CX",
     category: "User Experience",
     description:
-      "Composable Commerce ersetzt monolithische E-Commerce-Plattformen durch eine modulare Architektur aus Best-of-Breed-Komponenten. MACH-Architektur (Microservices, API-first, Cloud-native, Headless) ermoeglicht schnelle Anpassung an Marktanforderungen. SAP Commerce Cloud unterstuetzt headless-Szenarien, waehrend Emarsys KI-gesteuerte Personalisierung liefert.",
+      "Composable Commerce ersetzt monolithische E-Commerce-Plattformen durch eine modulare Architektur aus Best-of-Breed-Komponenten. MACH-Architektur (Microservices, API-first, Cloud-native, Headless) ermöglicht schnelle Anpassung an Marktanforderungen. SAP Commerce Cloud unterstützt headless-Szenarien, während Emarsys KI-gesteuerte Personalisierung liefert.",
     impact: "Hoch",
     status: "growing",
     maturityPercent: 55,
@@ -1032,14 +1032,14 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Emarsys Customer Engagement",
         description:
-          "KI-gestuetzte Omnichannel-Marketing-Plattform mit Echtzeit-Personalisierung, Predictive Analytics und Customer Lifecycle Management.",
+          "KI-gestützte Omnichannel-Marketing-Plattform mit Echtzeit-Personalisierung, Predictive Analytics und Customer Lifecycle Management.",
         available: true,
         module: "SAP CX",
       },
       {
         name: "SAP Customer Data Platform (CDP)",
         description:
-          "Einheitliche Kundendatenplattform fuer 360-Grad-Kundenprofile mit Consent-Management und Segmentierung.",
+          "Einheitliche Kundendatenplattform für 360-Grad-Kundenprofile mit Consent-Management und Segmentierung.",
         available: true,
         module: "SAP CX",
       },
@@ -1054,31 +1054,31 @@ export const trends: TechTrend[] = [
       {
         name: "Shopify Plus",
         description:
-          "Enterprise-E-Commerce-Plattform mit umfangreichem App-Oekosystem und Headless-Storefront-API (Hydrogen).",
+          "Enterprise-E-Commerce-Plattform mit umfangreichem App-Ökosystem und Headless-Storefront-API (Hydrogen).",
         vendor: "Shopify",
       },
     ],
     keyBenefits: [
-      "Schnellere Time-to-Market fuer neue Commerce-Features",
-      "Personalisierte Kundenerlebnisse ueber alle Kanaele",
+      "Schnellere Time-to-Market für neue Commerce-Features",
+      "Personalisierte Kundenerlebnisse über alle Kanäle",
       "Flexible Best-of-Breed-Architektur",
       "Nahtlose Integration von Commerce und ERP",
     ],
     useCases: [
       "Headless B2B-Webshop mit SAP-Backend",
       "Omnichannel-Personalisierung mit Emarsys",
-      "Unified Commerce fuer Retail (Online + Store)",
-      "Customer Data Platform fuer 360-Grad-Sicht",
+      "Unified Commerce für Retail (Online + Store)",
+      "Customer Data Platform für 360-Grad-Sicht",
     ],
     icon: "shopping-cart",
-    industries: ["Handel & Konsumgueter", "Fertigung & Maschinenbau", "Chemie & Pharma"],
+    industries: ["Handel & Konsumgüter", "Fertigung & Maschinenbau", "Chemie & Pharma"],
   },
   {
     id: "devops-platform",
-    title: "Platform Engineering & DevOps fuer SAP",
+    title: "Platform Engineering & DevOps für SAP",
     category: "Plattform & DevOps",
     description:
-      "Platform Engineering baut interne Developer-Plattformen, die Self-Service-Infrastruktur bereitstellen und Entwicklerproduktivitaet maximieren. Fuer SAP-Landschaften bedeutet das: CI/CD-Pipelines fuer ABAP und Fiori, GitOps fuer BTP-Deployments, automatisierte Testframeworks und Infrastructure-as-Code fuer SAP-Systemlandschaften. SAP hat mit SAP Cloud Transport Management und gCTS die Grundlage gelegt.",
+      "Platform Engineering baut interne Developer-Plattformen, die Self-Service-Infrastruktur bereitstellen und Entwicklerproduktivität maximieren. Für SAP-Landschaften bedeutet das: CI/CD-Pipelines für ABAP und Fiori, GitOps für BTP-Deployments, automatisierte Testframeworks und Infrastructure-as-Code für SAP-Systemlandschaften. SAP hat mit SAP Cloud Transport Management und gCTS die Grundlage gelegt.",
     impact: "Hoch",
     status: "growing",
     maturityPercent: 50,
@@ -1091,36 +1091,36 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Cloud Transport Management (cTMS)",
         description:
-          "Cloud-basiertes Transportmanagement fuer BTP-Artefakte (MTA, HTML5, Integration Content) mit Landscaping und Transportrouten.",
+          "Cloud-basiertes Transportmanagement für BTP-Artefakte (MTA, HTML5, Integration Content) mit Landscaping und Transportrouten.",
         available: true,
         module: "SAP BTP DevOps",
       },
       {
         name: "gCTS (Git-enabled Change and Transport System)",
         description:
-          "Git-Integration fuer das ABAP-Transportsystem. Ermoeglicht ABAP-Entwicklung mit Git-Workflows, Branching und Code Reviews.",
+          "Git-Integration für das ABAP-Transportsystem. Ermöglicht ABAP-Entwicklung mit Git-Workflows, Branching und Code Reviews.",
         available: true,
         module: "S/4HANA ABAP",
       },
       {
         name: "SAP Continuous Integration and Delivery (CI/CD)",
         description:
-          "Managed CI/CD-Service auf der BTP fuer automatisierte Builds, Tests und Deployments von SAP-Anwendungen (CAP, Fiori, ABAP).",
+          "Managed CI/CD-Service auf der BTP für automatisierte Builds, Tests und Deployments von SAP-Anwendungen (CAP, Fiori, ABAP).",
         available: true,
         module: "SAP BTP DevOps",
       },
     ],
     alternatives: [
       {
-        name: "GitHub Actions / GitLab CI fuer SAP",
+        name: "GitHub Actions / GitLab CI für SAP",
         description:
-          "Open-Source-CI/CD-Pipelines mit SAP-spezifischen Actions (project piper) fuer ABAP, Fiori und BTP-Deployments.",
+          "Open-Source-CI/CD-Pipelines mit SAP-spezifischen Actions (project piper) für ABAP, Fiori und BTP-Deployments.",
         vendor: "GitHub / GitLab",
       },
       {
-        name: "Terraform / Pulumi fuer SAP BTP",
+        name: "Terraform / Pulumi für SAP BTP",
         description:
-          "Infrastructure-as-Code-Tools mit SAP BTP Terraform Provider fuer automatisierte Subaccount- und Service-Provisionierung.",
+          "Infrastructure-as-Code-Tools mit SAP BTP Terraform Provider für automatisierte Subaccount- und Service-Provisionierung.",
         vendor: "HashiCorp / Pulumi",
       },
     ],
@@ -1128,23 +1128,23 @@ export const trends: TechTrend[] = [
       "80% schnellere Deployment-Zyklen durch CI/CD-Automatisierung",
       "Reproduzierbare SAP-Landschaften durch Infrastructure-as-Code",
       "Developer Self-Service reduziert Wartezeiten",
-      "Qualitaetssicherung durch automatisierte Tests und Code Reviews",
+      "Qualitätssicherung durch automatisierte Tests und Code Reviews",
     ],
     useCases: [
-      "CI/CD-Pipeline fuer SAP Fiori Apps mit automatisierten Tests",
-      "GitOps-Workflow fuer SAP BTP-Deployments",
-      "Automatisierte ABAP-Code-Qualitaetspruefung",
-      "Infrastructure-as-Code fuer SAP BTP Subaccounts",
+      "CI/CD-Pipeline für SAP Fiori Apps mit automatisierten Tests",
+      "GitOps-Workflow für SAP BTP-Deployments",
+      "Automatisierte ABAP-Code-Qualitätsprüfung",
+      "Infrastructure-as-Code für SAP BTP Subaccounts",
     ],
     icon: "git-branch",
-    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Telekommunikation", "Professional Services"],
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgüter", "Telekommunikation", "Professional Services"],
   },
   {
     id: "btp-strategy",
     title: "SAP BTP als Innovationsplattform",
     category: "Plattform & DevOps",
     description:
-      "Die SAP Business Technology Platform ist die strategische Erweiterungsplattform fuer S/4HANA. Mit ueber 100 Services in den Bereichen Application Development, Integration, Data & Analytics, AI und Automation ist die BTP der zentrale Baustein fuer die Clean-Core-Strategie. Das SAP Cloud Application Programming Model (CAP) wird zum Standard fuer Side-by-Side-Entwicklung. ABAP Cloud als Cloud-ready ABAP-Tier ermoeglicht die Wiederverwendung von ABAP-Know-how.",
+      "Die SAP Business Technology Platform ist die strategische Erweiterungsplattform für S/4HANA. Mit über 100 Services in den Bereichen Application Development, Integration, Data & Analytics, AI und Automation ist die BTP der zentrale Baustein für die Clean-Core-Strategie. Das SAP Cloud Application Programming Model (CAP) wird zum Standard für Side-by-Side-Entwicklung. ABAP Cloud als Cloud-ready ABAP-Tier ermöglicht die Wiederverwendung von ABAP-Know-how.",
     impact: "Sehr hoch",
     status: "established",
     maturityPercent: 70,
@@ -1157,28 +1157,28 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Cloud Application Programming Model (CAP)",
         description:
-          "Open-Source-Framework fuer die Entwicklung von Cloud-Anwendungen auf der BTP mit CDS, Node.js/Java und nativer SAP-Service-Integration. De-facto-Standard fuer Side-by-Side-Extensions.",
+          "Open-Source-Framework für die Entwicklung von Cloud-Anwendungen auf der BTP mit CDS, Node.js/Java und nativer SAP-Service-Integration. De-facto-Standard für Side-by-Side-Extensions.",
         available: true,
         module: "SAP BTP",
       },
       {
         name: "ABAP Cloud (Steampunk)",
         description:
-          "Cloud-faehiger ABAP-Tier auf der BTP fuer ABAP-Entwickler. RAP (ABAP RESTful Application Programming Model) als modernes Entwicklungsmodell fuer Fiori-Apps und APIs.",
+          "Cloud-fähiger ABAP-Tier auf der BTP für ABAP-Entwickler. RAP (ABAP RESTful Application Programming Model) als modernes Entwicklungsmodell für Fiori-Apps und APIs.",
         available: true,
         module: "SAP BTP ABAP Environment",
       },
       {
         name: "SAP HANA Cloud",
         description:
-          "Cloud-native In-Memory-Datenbank mit Multi-Model-Unterstuetzung (relational, graph, spatial, document) und nativer Data Lake Integration (SAP HANA Cloud Data Lake).",
+          "Cloud-native In-Memory-Datenbank mit Multi-Model-Unterstützung (relational, graph, spatial, document) und nativer Data Lake Integration (SAP HANA Cloud Data Lake).",
         available: true,
         module: "SAP BTP",
       },
       {
         name: "SAP Business Application Studio (BAS)",
         description:
-          "Cloud-basierte IDE auf VS Code-Basis fuer die Entwicklung von SAP Fiori, CAP, ABAP und Mobile Apps mit SAP-spezifischen Extensions.",
+          "Cloud-basierte IDE auf VS Code-Basis für die Entwicklung von SAP Fiori, CAP, ABAP und Mobile Apps mit SAP-spezifischen Extensions.",
         available: true,
         module: "SAP BTP",
       },
@@ -1187,31 +1187,31 @@ export const trends: TechTrend[] = [
       {
         name: "Vercel / Netlify + Headless SAP",
         description:
-          "Frontend-Cloud-Plattformen fuer React/Next.js-Anwendungen mit SAP OData/REST Backend-Integration.",
+          "Frontend-Cloud-Plattformen für React/Next.js-Anwendungen mit SAP OData/REST Backend-Integration.",
         vendor: "Vercel / Netlify",
       },
     ],
     keyBenefits: [
-      "Zentrale Plattform fuer alle SAP-Erweiterungen und Innovationen",
-      "Clean-Core-Konformitaet durch Side-by-Side-Architektur",
-      "Multi-Cloud-Unterstuetzung (AWS, Azure, GCP, Alibaba)",
+      "Zentrale Plattform für alle SAP-Erweiterungen und Innovationen",
+      "Clean-Core-Konformität durch Side-by-Side-Architektur",
+      "Multi-Cloud-Unterstützung (AWS, Azure, GCP, Alibaba)",
       "Wiederverwendung von ABAP-Know-how in der Cloud",
     ],
     useCases: [
-      "Side-by-Side-Extensions fuer S/4HANA Cloud",
+      "Side-by-Side-Extensions für S/4HANA Cloud",
       "Custom Fiori Apps mit SAP CAP Backend",
-      "ABAP Cloud Microservices fuer komplexe Geschaeftslogik",
+      "ABAP Cloud Microservices für komplexe Geschäftslogik",
       "Zentrale Event-basierte Architektur auf BTP",
     ],
     icon: "server",
-    industries: ["Automotive", "Chemie & Pharma", "Energie & Versorgung", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Logistik & Transport", "Oeffentlicher Sektor", "Gesundheitswesen", "Telekommunikation", "Professional Services"],
+    industries: ["Automotive", "Chemie & Pharma", "Energie & Versorgung", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgüter", "Logistik & Transport", "Öffentlicher Sektor", "Gesundheitswesen", "Telekommunikation", "Professional Services"],
   },
   {
     id: "ai-governance",
     title: "KI-Governance & EU AI Act",
     category: "Sicherheit",
     description:
-      "Der EU AI Act ist seit August 2024 in Kraft und stellt weltweit die erste umfassende KI-Regulierung dar. Ab Februar 2025 gelten Verbote fuer inakzeptable KI-Risiken, ab August 2025 Transparenzpflichten, und ab August 2026 muessen Hochrisiko-KI-Systeme vollstaendig konform sein. Fuer SAP-Kunden bedeutet das: Dokumentation aller KI-Modelle, Bias-Testing, Erklaerbarkeit und menschliche Aufsicht fuer Hochrisiko-Entscheidungen.",
+      "Der EU AI Act ist seit August 2024 in Kraft und stellt weltweit die erste umfassende KI-Regulierung dar. Ab Februar 2025 gelten Verbote für inakzeptable KI-Risiken, ab August 2025 Transparenzpflichten, und ab August 2026 müssen Hochrisiko-KI-Systeme vollständig konform sein. Für SAP-Kunden bedeutet das: Dokumentation aller KI-Modelle, Bias-Testing, Erklärbarkeit und menschliche Aufsicht für Hochrisiko-Entscheidungen.",
     impact: "Hoch",
     status: "emerging",
     maturityPercent: 30,
@@ -1224,14 +1224,14 @@ export const trends: TechTrend[] = [
       {
         name: "SAP AI Lifecycle Management",
         description:
-          "Governance-Funktionen in SAP AI Core fuer Model Monitoring, Bias Detection, Explainability und Audit Trails fuer KI-Modelle im SAP-Oekosystem.",
+          "Governance-Funktionen in SAP AI Core für Model Monitoring, Bias Detection, Explainability und Audit Trails für KI-Modelle im SAP-Ökosystem.",
         available: true,
         module: "SAP BTP AI",
       },
       {
         name: "SAP AI Ethics Toolkit (geplant)",
         description:
-          "Geplantes Toolkit fuer die Bewertung und Dokumentation von KI-Risiken gemaess EU AI Act mit integrierter Risikokategorisierung und Compliance-Reporting.",
+          "Geplantes Toolkit für die Bewertung und Dokumentation von KI-Risiken gemäß EU AI Act mit integrierter Risikokategorisierung und Compliance-Reporting.",
         available: false,
         plannedDate: "Q2 2026",
         module: "SAP BTP AI",
@@ -1247,31 +1247,31 @@ export const trends: TechTrend[] = [
       {
         name: "Credo AI / Holistic AI",
         description:
-          "Spezialisierte KI-Governance-Plattformen fuer Risikobewertung, Compliance-Dokumentation und Responsible-AI-Frameworks.",
+          "Spezialisierte KI-Governance-Plattformen für Risikobewertung, Compliance-Dokumentation und Responsible-AI-Frameworks.",
         vendor: "Credo AI / Holistic AI",
       },
     ],
     keyBenefits: [
       "EU AI Act Compliance ab August 2026 sichergestellt",
-      "Transparente und erklaerbare KI-Entscheidungen",
+      "Transparente und erklärbare KI-Entscheidungen",
       "Reduziertes Risiko durch Bias-Erkennung und -Mitigation",
-      "Vertrauenswuerdige KI als Wettbewerbsvorteil",
+      "Vertrauenswürdige KI als Wettbewerbsvorteil",
     ],
     useCases: [
       "Risikokategorisierung aller eingesetzten KI-Systeme nach EU AI Act",
       "Dokumentation und Monitoring von KI-Modellen in SAP",
-      "Bias-Testing fuer HR-KI in SuccessFactors",
-      "Erklaerbarkeits-Reports fuer Finanz-KI",
+      "Bias-Testing für HR-KI in SuccessFactors",
+      "Erklärbarkeits-Reports für Finanz-KI",
     ],
     icon: "scale",
-    industries: ["Finanzdienstleistungen", "Gesundheitswesen", "Oeffentlicher Sektor", "Chemie & Pharma"],
+    industries: ["Finanzdienstleistungen", "Gesundheitswesen", "Öffentlicher Sektor", "Chemie & Pharma"],
   },
   {
     id: "observability",
     title: "Full-Stack Observability & AIOps",
     category: "Plattform & DevOps",
     description:
-      "Moderne SAP-Landschaften sind hybrid und komplex: S/4HANA, BTP-Services, Drittanbieter-Systeme und Cloud-Infrastruktur muessen ganzheitlich ueberwacht werden. AIOps nutzt Machine Learning fuer Anomalie-Erkennung, Root-Cause-Analysis und automatisierte Remediation. SAP Cloud ALM bietet Monitoring und Operations fuer SAP-Landschaften, waehrend Dynatrace und Datadog die fuehrenden Drittanbieter-Plattformen sind.",
+      "Moderne SAP-Landschaften sind hybrid und komplex: S/4HANA, BTP-Services, Drittanbieter-Systeme und Cloud-Infrastruktur müssen ganzheitlich überwacht werden. AIOps nutzt Machine Learning für Anomalie-Erkennung, Root-Cause-Analysis und automatisierte Remediation. SAP Cloud ALM bietet Monitoring und Operations für SAP-Landschaften, während Dynatrace und Datadog die führenden Drittanbieter-Plattformen sind.",
     impact: "Hoch",
     status: "growing",
     maturityPercent: 55,
@@ -1284,14 +1284,14 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Cloud ALM (Operations)",
         description:
-          "Cloud-basiertes Application Lifecycle Management mit Real User Monitoring, Health Monitoring, Integration Monitoring und Business Process Monitoring fuer SAP-Landschaften.",
+          "Cloud-basiertes Application Lifecycle Management mit Real User Monitoring, Health Monitoring, Integration Monitoring und Business Process Monitoring für SAP-Landschaften.",
         available: true,
         module: "SAP Cloud ALM",
       },
       {
         name: "SAP Focused Run (On-Premise)",
         description:
-          "Advanced Monitoring und Alerting fuer grosse On-Premise-SAP-Landschaften mit System Monitoring, Configuration Validation und Synthetic User Monitoring.",
+          "Advanced Monitoring und Alerting für grosse On-Premise-SAP-Landschaften mit System Monitoring, Configuration Validation und Synthetic User Monitoring.",
         available: true,
         module: "SAP Focused Run",
       },
@@ -1313,24 +1313,24 @@ export const trends: TechTrend[] = [
     keyBenefits: [
       "50% schnellere Mean-Time-to-Resolution (MTTR)",
       "Proaktive Fehlererkennung vor Benutzer-Impact",
-      "End-to-End-Visibilitaet ueber hybride SAP-Landschaften",
-      "Automatisierte Remediation fuer Standardprobleme",
+      "End-to-End-Visibilität über hybride SAP-Landschaften",
+      "Automatisierte Remediation für Standardprobleme",
     ],
     useCases: [
       "End-to-End-Monitoring einer RISE-with-SAP-Landschaft",
-      "Proaktive Performance-Optimierung fuer S/4HANA",
-      "Business-Process-Monitoring fuer Order-to-Cash",
+      "Proaktive Performance-Optimierung für S/4HANA",
+      "Business-Process-Monitoring für Order-to-Cash",
       "AIOps-basierte Anomalie-Erkennung in Batch-Jobs",
     ],
     icon: "activity",
-    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Telekommunikation", "Professional Services"],
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgüter", "Telekommunikation", "Professional Services"],
   },
   {
     id: "ux-fiori",
     title: "SAP Fiori & Next-Gen UX",
     category: "User Experience",
     description:
-      "SAP Fiori ist das zentrale UX-Framework fuer alle SAP-Anwendungen. Mit Fiori Elements, Flexible Programming Model und dem neuen Horizon Theme hat SAP die Benutzererfahrung massiv verbessert. SAP Build Work Zone dient als zentrales Portal fuer personalisierte Aufgaben und Apps. Mobile-First-Design, barrierefreie Gestaltung (WCAG 2.1) und KI-gestuetzte UX-Personalisierung sind die aktuellen Schwerpunkte.",
+      "SAP Fiori ist das zentrale UX-Framework für alle SAP-Anwendungen. Mit Fiori Elements, Flexible Programming Model und dem neuen Horizon Theme hat SAP die Benutzererfahrung massiv verbessert. SAP Build Work Zone dient als zentrales Portal für personalisierte Aufgaben und Apps. Mobile-First-Design, barrierefreie Gestaltung (WCAG 2.1) und KI-gestützte UX-Personalisierung sind die aktuellen Schwerpunkte.",
     impact: "Hoch",
     status: "established",
     maturityPercent: 82,
@@ -1357,7 +1357,7 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Mobile Start",
         description:
-          "Native Mobile App fuer den Zugriff auf SAP Fiori Apps, Notifications, ToDos und SAP SuccessFactors auf iOS und Android.",
+          "Native Mobile App für den Zugriff auf SAP Fiori Apps, Notifications, ToDos und SAP SuccessFactors auf iOS und Android.",
         available: true,
         module: "SAP Mobile",
       },
@@ -1366,31 +1366,31 @@ export const trends: TechTrend[] = [
       {
         name: "React / Angular + OData",
         description:
-          "Custom-Frontend-Frameworks mit direkter Anbindung an SAP OData APIs fuer maximale Gestaltungsfreiheit ausserhalb von Fiori.",
+          "Custom-Frontend-Frameworks mit direkter Anbindung an SAP OData APIs für maximale Gestaltungsfreiheit ausserhalb von Fiori.",
         vendor: "Open Source",
       },
     ],
     keyBenefits: [
-      "Konsistente User Experience ueber alle SAP-Module",
+      "Konsistente User Experience über alle SAP-Module",
       "WCAG-2.1-konforme Barrierefreiheit",
       "70% weniger Custom-UI-Entwicklung durch Fiori Elements",
-      "Personalisierte Arbeitsbereiche steigern Produktivitaet",
+      "Personalisierte Arbeitsbereiche steigern Produktivität",
     ],
     useCases: [
-      "Migration von SAP GUI auf Fiori fuer Kernprozesse",
+      "Migration von SAP GUI auf Fiori für Kernprozesse",
       "Aufbau eines zentralen Fiori Launchpad mit Work Zone",
-      "Mobile Fiori Apps fuer Vertrieb und Service",
-      "Barrierefreie SAP-Oberflaechen nach WCAG 2.1",
+      "Mobile Fiori Apps für Vertrieb und Service",
+      "Barrierefreie SAP-Oberflächen nach WCAG 2.1",
     ],
     icon: "layout",
-    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgueter", "Logistik & Transport", "Oeffentlicher Sektor", "Gesundheitswesen", "Telekommunikation", "Professional Services"],
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Finanzdienstleistungen", "Handel & Konsumgüter", "Logistik & Transport", "Öffentlicher Sektor", "Gesundheitswesen", "Telekommunikation", "Professional Services"],
   },
   {
     id: "supply-chain-resilience",
     title: "Resiliente Lieferketten & Control Tower",
     category: "Daten & Analytics",
     description:
-      "Die Krisen der letzten Jahre (Pandemie, Suezkanal, Chip-Mangel, geopolitische Spannungen) haben die Verwundbarkeit globaler Lieferketten offengelegt. Supply Chain Resilience erfordert Echtzeit-Visibilitaet, Risikomanagement, Szenarioplanung und agile Reaktionsfaehigkeit. SAPs Integrated Business Planning (IBP) und Supply Chain Control Tower bilden die technologische Grundlage fuer resiliente, KI-gestuetzte Lieferketten.",
+      "Die Krisen der letzten Jahre (Pandemie, Suezkanal, Chip-Mangel, geopolitische Spannungen) haben die Verwundbarkeit globaler Lieferketten offengelegt. Supply Chain Resilience erfordert Echtzeit-Visibilität, Risikomanagement, Szenarioplanung und agile Reaktionsfähigkeit. SAPs Integrated Business Planning (IBP) und Supply Chain Control Tower bilden die technologische Grundlage für resiliente, KI-gestützte Lieferketten.",
     impact: "Sehr hoch",
     status: "growing",
     maturityPercent: 60,
@@ -1403,21 +1403,21 @@ export const trends: TechTrend[] = [
       {
         name: "SAP Integrated Business Planning (IBP)",
         description:
-          "Cloud-basierte Planungsplattform fuer Demand Planning, Supply Planning, Inventory Optimization, Sales & Operations Planning (S&OP) und Response & Supply.",
+          "Cloud-basierte Planungsplattform für Demand Planning, Supply Planning, Inventory Optimization, Sales & Operations Planning (S&OP) und Response & Supply.",
         available: true,
         module: "SAP Digital Supply Chain",
       },
       {
         name: "SAP Supply Chain Control Tower",
         description:
-          "Echtzeit-Dashboard fuer End-to-End-Supply-Chain-Visibilitaet mit KI-gestuetzter Anomalie-Erkennung, Alerting und Szenarioplanung.",
+          "Echtzeit-Dashboard für End-to-End-Supply-Chain-Visibilität mit KI-gestützter Anomalie-Erkennung, Alerting und Szenarioplanung.",
         available: true,
         module: "SAP Digital Supply Chain",
       },
       {
         name: "SAP Business Network",
         description:
-          "Digitales Netzwerk (ehemals Ariba Network) fuer die Zusammenarbeit mit Lieferanten, Logistikdienstleistern und Partnern mit ueber 5,5 Millionen Unternehmen.",
+          "Digitales Netzwerk (ehemals Ariba Network) für die Zusammenarbeit mit Lieferanten, Logistikdienstleistern und Partnern mit über 5,5 Millionen Unternehmen.",
         available: true,
         module: "SAP Business Network",
       },
@@ -1437,19 +1437,19 @@ export const trends: TechTrend[] = [
       },
     ],
     keyBenefits: [
-      "Echtzeit-Visibilitaet ueber die gesamte Lieferkette",
+      "Echtzeit-Visibilität über die gesamte Lieferkette",
       "40% bessere Forecast-Genauigkeit durch KI",
-      "Schnellere Reaktion auf Stoerungen durch Szenarioplanung",
-      "Reduktion von Sicherheitsbestaenden durch verbesserte Planung",
+      "Schnellere Reaktion auf Störungen durch Szenarioplanung",
+      "Reduktion von Sicherheitsbeständen durch verbesserte Planung",
     ],
     useCases: [
-      "Demand Sensing mit Machine Learning fuer volatile Maerkte",
+      "Demand Sensing mit Machine Learning für volatile Märkte",
       "Echtzeit-Supply-Chain-Risk-Monitoring",
       "S&OP-Prozess mit kollaborativer Planung",
-      "Multi-Tier-Lieferantenmanagement ueber SAP Business Network",
+      "Multi-Tier-Lieferantenmanagement über SAP Business Network",
     ],
     icon: "truck",
-    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Handel & Konsumgueter", "Logistik & Transport"],
+    industries: ["Automotive", "Chemie & Pharma", "Fertigung & Maschinenbau", "Handel & Konsumgüter", "Logistik & Transport"],
   },
 ]
 
@@ -1457,25 +1457,25 @@ export const sapRoadmap = [
   {
     year: 2023,
     items: [
-      "Clean Core Strategie offiziell eingefuehrt (SAP TechEd)",
-      "SAP Joule KI-Copilot Launch fuer S/4HANA Cloud",
+      "Clean Core Strategie offiziell eingeführt (SAP TechEd)",
+      "SAP Joule KI-Copilot Launch für S/4HANA Cloud",
       "SAP Integration Suite mit Trading Partner Management",
       "ABAP Cloud (Steampunk) General Availability",
       "SAP Analytics Cloud mit Planning-Integration",
-      "SAP Cloud ALM als Standard-ALM fuer Cloud-Kunden",
+      "SAP Cloud ALM als Standard-ALM für Cloud-Kunden",
     ],
   },
   {
     year: 2024,
     items: [
       "SAP Business AI: 80+ vordefinierte Szenarien live",
-      "SAP Datasphere mit KI-gestuetzter Datenexploration",
-      "SAP Build Suite vollstaendig in BTP integriert",
+      "SAP Datasphere mit KI-gestützter Datenexploration",
+      "SAP Build Suite vollständig in BTP integriert",
       "SAP Signavio nativ in SAP Cloud ALM eingebunden",
       "EU AI Act in Kraft getreten (August 2024)",
       "NIS2-Richtlinie umgesetzt (Oktober 2024)",
       "SAP S/4HANA 2023 FPS02 mit Clean Core Dashboard",
-      "NIST Post-Quantum-Standards veroeffentlicht (ML-KEM, ML-DSA)",
+      "NIST Post-Quantum-Standards veröffentlicht (ML-KEM, ML-DSA)",
     ],
   },
   {
@@ -1483,9 +1483,9 @@ export const sapRoadmap = [
     items: [
       "SAP Sustainability Control Tower mit CSRD/ESRS-Templates",
       "SAP S/4HANA Cloud Sovereign Edition GA (EU Access)",
-      "SAP Business Data Cloud fuer unternehmensweite KI",
-      "DevOps-Toolchain fuer SAP: gCTS + CI/CD + Terraform",
-      "CSRD-Reporting-Pflicht fuer grosse Unternehmen",
+      "SAP Business Data Cloud für unternehmensweite KI",
+      "DevOps-Toolchain für SAP: gCTS + CI/CD + Terraform",
+      "CSRD-Reporting-Pflicht für grosse Unternehmen",
       "EU AI Act Transparenzpflichten ab August 2025",
       "SAP Fiori Horizon Theme als neuer Standard",
       "SAP Advanced Event Mesh Ausbau (Multi-Cloud)",
@@ -1496,11 +1496,11 @@ export const sapRoadmap = [
     items: [
       "SAP Joule Collaborative Agents (Q3 2026)",
       "SAP AI Agent Builder auf BTP (Q4 2026)",
-      "SAP AI Ethics Toolkit fuer EU AI Act (Q2 2026)",
-      "EU AI Act: Hochrisiko-KI vollstaendig konform (August 2026)",
+      "SAP AI Ethics Toolkit für EU AI Act (Q2 2026)",
+      "EU AI Act: Hochrisiko-KI vollständig konform (August 2026)",
       "DSAG Technologietage 2026",
       "SAP S/4HANA Cloud 2026 mit Next-Gen Planning",
-      "SAP Build Code mit generativer KI-Unterstuetzung",
+      "SAP Build Code mit generativer KI-Unterstützung",
     ],
   },
   {
@@ -1508,9 +1508,9 @@ export const sapRoadmap = [
     items: [
       "SAP Green Ledger: CO2-Bewertung je Finanztransaktion",
       "Nur noch Clean-Core-konforme neue S/4HANA-Features",
-      "Vollstaendige BTP-Service-Konsolidierung",
+      "Vollständige BTP-Service-Konsolidierung",
       "Next-Gen SAP Fiori mit KI-Personalisierung",
-      "SAP HANA Cloud mit Vector-Search fuer RAG",
+      "SAP HANA Cloud mit Vector-Search für RAG",
       "Autonomous ERP: KI-gesteuerte Standardprozesse",
     ],
   },
@@ -1518,9 +1518,9 @@ export const sapRoadmap = [
     year: 2028,
     items: [
       "Ende Mainstream-Wartung SAP ECC 6.0 (31.12.2027)",
-      "Post-Quantum Cryptography Readiness fuer SAP-Systeme",
+      "Post-Quantum Cryptography Readiness für SAP-Systeme",
       "Autonomous Enterprise: 50% automatisierte Entscheidungen",
-      "SAP Digital Twin Platform fuer Lieferketten",
+      "SAP Digital Twin Platform für Lieferketten",
       "Extended Wartung ECC nur noch kostenpflichtig",
     ],
   },

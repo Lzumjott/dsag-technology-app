@@ -15,6 +15,17 @@ const config: Config = {
         display: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],
       },
       colors: {
+        /* Realcore brand palette */
+        rc: {
+          white: '#FFFFFF',
+          'light-gray': '#E7E6E6',
+          border: '#DADADA',
+          text: '#111918',
+          'text-secondary': '#767776',
+          'dark-gray': '#636362',
+          lime: '#80D800',
+          amber: '#FF8000',
+        },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -67,9 +78,9 @@ const config: Config = {
         },
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        lg: '0',
+        md: '0',
+        sm: '0',
       },
       keyframes: {
         'accordion-down': {

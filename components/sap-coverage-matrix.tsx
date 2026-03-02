@@ -25,9 +25,9 @@ export function SapCoverageMatrix() {
   const coveragePercent = Math.round((trends.filter((t) => t.sapSolutions.length > 0).length / trends.length) * 100)
 
   return (
-    <section id="sap-matrix" className="scroll-mt-16 border-t border-border/50 px-4 py-10 sm:px-6 sm:py-16 md:py-24">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-6 sm:mb-10">
+    <section id="sap-matrix" className="grid-section scroll-mt-20 border-t border-border/50 py-[var(--grid-unit)]">
+      <div className="grid-content">
+        <div className="mb-[var(--grid-unit)]">
           <div className="mb-2 flex items-center gap-2">
             <Grid3X3 className="h-5 w-5 text-primary" />
             <h2 className="font-display text-2xl font-bold tracking-tight text-foreground text-balance sm:text-3xl md:text-4xl">
@@ -35,23 +35,23 @@ export function SapCoverageMatrix() {
             </h2>
           </div>
           <p className="max-w-2xl text-sm text-muted-foreground sm:text-base">
-            Detaillierte Analyse der SAP-Loesungsabdeckung pro Kategorie mit {totalSapAvailable + totalSapPlanned} SAP-Loesungen und {totalAlternatives} Alternativen.
+            Detaillierte Analyse der SAP-Lösungsabdeckung pro Kategorie mit {totalSapAvailable + totalSapPlanned} SAP-Lösungen und {totalAlternatives} Alternativen.
           </p>
         </div>
 
         {/* Summary Bar */}
-        <div className="mb-6 rounded-xl border border-border/50 bg-card p-4 sm:mb-8 sm:p-6">
+        <div className="mb-6 border border-border/50 bg-card p-[var(--grid-unit-eighth)] sm:mb-8">
           <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <div className="font-display text-3xl font-bold text-primary sm:text-4xl">{coveragePercent}%</div>
               <div className="text-[13px] text-muted-foreground sm:text-sm">
-                der Trends mit SAP-Loesungen abgedeckt
+                der Trends mit SAP-Lösungen abgedeckt
               </div>
             </div>
             <div className="flex gap-4 sm:gap-6">
               <div className="text-center">
                 <div className="font-display text-xl font-bold text-emerald-400 sm:text-2xl">{totalSapAvailable}</div>
-                <div className="text-[10px] text-muted-foreground sm:text-xs">Verfuegbar</div>
+                <div className="text-[10px] text-muted-foreground sm:text-xs">Verfügbar</div>
               </div>
               <div className="text-center">
                 <div className="font-display text-xl font-bold text-amber-400 sm:text-2xl">{totalSapPlanned}</div>
@@ -65,7 +65,7 @@ export function SapCoverageMatrix() {
           </div>
 
           {/* Overall coverage bar */}
-          <div className="h-3 w-full overflow-hidden rounded-full bg-muted">
+          <div className="h-3 w-full overflow-hidden bg-muted">
             <div className="flex h-full">
               <div
                 className="h-full bg-emerald-500 transition-all"
@@ -82,16 +82,16 @@ export function SapCoverageMatrix() {
             </div>
           </div>
           <div className="mt-2 flex flex-wrap gap-3 text-[10px] text-muted-foreground sm:gap-4 sm:text-xs">
-            <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-emerald-500" /> SAP verfuegbar</span>
-            <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-amber-500" /> SAP geplant</span>
-            <span className="flex items-center gap-1"><span className="h-2 w-2 rounded-full bg-fuchsia-500/50" /> Alternativen</span>
+            <span className="flex items-center gap-1"><span className="h-2 w-2 bg-emerald-500" /> SAP verfügbar</span>
+            <span className="flex items-center gap-1"><span className="h-2 w-2 bg-amber-500" /> SAP geplant</span>
+            <span className="flex items-center gap-1"><span className="h-2 w-2 bg-fuchsia-500/50" /> Alternativen</span>
           </div>
         </div>
 
         {/* Category breakdown */}
-        <div className="flex flex-col gap-3 sm:gap-4">
+        <div className="flex flex-col gap-0">
           {categoryData.map((cat) => (
-            <div key={cat.category} className="rounded-xl border border-border/50 bg-card p-4 sm:p-5">
+            <div key={cat.category} className="border border-border/50 bg-card p-[var(--grid-unit-eighth)]">
               <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <h3 className="font-display text-base font-semibold text-foreground">{cat.category}</h3>
@@ -127,8 +127,8 @@ export function SapCoverageMatrix() {
                   const altCount = trend.alternatives.length
 
                   return (
-                    <div key={trend.id} className="flex items-center gap-2 rounded-lg bg-secondary/30 px-3 py-2 sm:gap-3">
-                      <span className={cn("shrink-0 rounded-md border px-1.5 py-0.5 text-[9px] font-medium", statusColors[trend.status])}>
+                    <div key={trend.id} className="flex items-center gap-2 bg-secondary/30 px-3 py-2 sm:gap-3">
+                      <span className={cn("shrink-0 border px-1.5 py-0.5 text-[9px] font-medium", statusColors[trend.status])}>
                         {statusLabels[trend.status]}
                       </span>
                       <span className="min-w-0 flex-1 truncate text-[12px] font-medium text-foreground sm:text-[13px]">
@@ -138,14 +138,14 @@ export function SapCoverageMatrix() {
                         {available > 0 && (
                           <div className="flex items-center gap-0.5">
                             {Array.from({ length: available }).map((_, i) => (
-                              <div key={i} className="h-2 w-2 rounded-full bg-emerald-500" />
+                              <div key={i} className="h-2 w-2 bg-emerald-500" />
                             ))}
                           </div>
                         )}
                         {planned > 0 && (
                           <div className="flex items-center gap-0.5">
                             {Array.from({ length: planned }).map((_, i) => (
-                              <div key={i} className="h-2 w-2 rounded-full bg-amber-500" />
+                              <div key={i} className="h-2 w-2 bg-amber-500" />
                             ))}
                           </div>
                         )}

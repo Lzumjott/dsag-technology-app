@@ -33,31 +33,34 @@ export default function TrendDetailPage() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="mx-auto flex h-14 max-w-7xl items-center gap-4 px-4 sm:px-6">
-          <button
-            onClick={() => router.back()}
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            <span className="hidden sm:inline">Zurück</span>
-          </button>
-          <div className="h-4 w-px bg-border" />
-          <span className="text-sm font-medium text-foreground">{trend.title}</span>
+        <div className="grid-section">
+          <div className="grid-content flex h-20 items-center gap-4">
+            <button
+              onClick={() => router.back()}
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              <span className="hidden sm:inline">Zurück</span>
+            </button>
+            <div className="h-4 w-px bg-border" />
+            <span className="text-sm font-medium text-foreground">{trend.title}</span>
+          </div>
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
+      <main className="grid-section py-[var(--grid-unit)]">
+        <div className="grid-content">
         {/* Hero Section */}
         <div className="mb-8 sm:mb-12">
           <div className="flex flex-wrap items-center gap-2 mb-4">
-            <span className={cn("rounded-md border px-2.5 py-1 text-xs font-medium", statusColors[trend.status])}>
+            <span className={cn("border px-2.5 py-1 text-xs font-medium", statusColors[trend.status])}>
               {statusLabels[trend.status]}
             </span>
-            <span className="rounded-md border border-border bg-secondary px-2.5 py-1 text-xs text-muted-foreground">
+            <span className="border border-border bg-secondary px-2.5 py-1 text-xs text-muted-foreground">
               {trend.category}
             </span>
             {trend.realcoreExpertise && (
-              <span className="flex items-center gap-1 rounded-md border border-primary/30 bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
+              <span className="flex items-center gap-1 border border-primary/30 bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
                 <Award className="h-3 w-3" />
                 RealCore Expertise
               </span>
@@ -75,7 +78,7 @@ export default function TrendDetailPage() {
 
         {/* Key Metrics */}
         <div className="mb-8 grid grid-cols-2 gap-3 sm:mb-12 sm:grid-cols-4 sm:gap-4">
-          <div className="rounded-xl border border-border/50 bg-card p-4">
+          <div className="border border-border/50 bg-card p-4">
             <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               <TrendingUp className="h-4 w-4 text-primary" />
               Reifegrad
@@ -83,12 +86,12 @@ export default function TrendDetailPage() {
             <div className="mt-2 flex items-end gap-2">
               <span className="font-display text-2xl font-bold text-foreground sm:text-3xl">{trend.maturityPercent}%</span>
             </div>
-            <div className="mt-2 h-2 overflow-hidden rounded-full bg-muted">
-              <div className="h-full rounded-full bg-primary" style={{ width: `${trend.maturityPercent}%` }} />
+            <div className="mt-2 h-2 overflow-hidden bg-muted">
+              <div className="h-full bg-primary" style={{ width: `${trend.maturityPercent}%` }} />
             </div>
           </div>
 
-          <div className="rounded-xl border border-border/50 bg-card p-4">
+          <div className="border border-border/50 bg-card p-4">
             <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               <BarChart3 className="h-4 w-4 text-sky-400" />
               Marktadoption
@@ -96,12 +99,12 @@ export default function TrendDetailPage() {
             <div className="mt-2">
               <span className="font-display text-2xl font-bold text-foreground sm:text-3xl">{trend.marketAdoption}%</span>
             </div>
-            <div className="mt-2 h-2 overflow-hidden rounded-full bg-muted">
-              <div className="h-full rounded-full bg-sky-400" style={{ width: `${trend.marketAdoption}%` }} />
+            <div className="mt-2 h-2 overflow-hidden bg-muted">
+              <div className="h-full bg-sky-400" style={{ width: `${trend.marketAdoption}%` }} />
             </div>
           </div>
 
-          <div className="rounded-xl border border-border/50 bg-card p-4">
+          <div className="border border-border/50 bg-card p-4">
             <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               <Target className="h-4 w-4 text-amber-400" />
               Priorität
@@ -114,7 +117,7 @@ export default function TrendDetailPage() {
             <div className="mt-2 text-xs text-muted-foreground">Investitionspriorität</div>
           </div>
 
-          <div className="rounded-xl border border-border/50 bg-card p-4">
+          <div className="border border-border/50 bg-card p-4">
             <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-muted-foreground">
               <Calendar className="h-4 w-4 text-emerald-400" />
               Gartner Phase
@@ -138,7 +141,7 @@ export default function TrendDetailPage() {
             {trend.industries.map((industry) => (
               <span
                 key={industry}
-                className={cn("rounded-md border px-3 py-1.5 text-xs font-medium", industryColors[industry as Industry])}
+                className={cn("border px-3 py-1.5 text-xs font-medium", industryColors[industry as Industry])}
               >
                 {industry}
               </span>
@@ -160,11 +163,11 @@ export default function TrendDetailPage() {
                 <div className="mb-2 text-xs font-medium uppercase tracking-wider text-emerald-400">Verfügbar</div>
                 <div className="flex flex-col gap-3">
                   {availableSolutions.map((solution) => (
-                    <div key={solution.name} className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4">
+                    <div key={solution.name} className="border border-emerald-500/20 bg-emerald-500/5 p-4">
                       <div className="flex items-start justify-between gap-2">
                         <h3 className="font-medium text-foreground">{solution.name}</h3>
                         {solution.module && (
-                          <span className="shrink-0 rounded bg-emerald-500/20 px-2 py-0.5 text-[10px] font-medium text-emerald-400">
+                          <span className="shrink-0 bg-emerald-500/20 px-2 py-0.5 text-[10px] font-medium text-emerald-400">
                             {solution.module}
                           </span>
                         )}
@@ -181,12 +184,12 @@ export default function TrendDetailPage() {
                 <div className="mb-2 text-xs font-medium uppercase tracking-wider text-amber-400">Geplant</div>
                 <div className="flex flex-col gap-3">
                   {plannedSolutions.map((solution) => (
-                    <div key={solution.name} className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-4">
+                    <div key={solution.name} className="border border-amber-500/20 bg-amber-500/5 p-4">
                       <div className="flex items-start justify-between gap-2">
                         <h3 className="font-medium text-foreground">{solution.name}</h3>
                         <div className="flex items-center gap-2">
                           {solution.plannedDate && (
-                            <span className="flex items-center gap-1 rounded bg-amber-500/20 px-2 py-0.5 text-[10px] font-medium text-amber-400">
+                            <span className="flex items-center gap-1 bg-amber-500/20 px-2 py-0.5 text-[10px] font-medium text-amber-400">
                               <Clock className="h-3 w-3" />
                               {solution.plannedDate}
                             </span>
@@ -215,11 +218,11 @@ export default function TrendDetailPage() {
             {trend.alternatives.length > 0 ? (
               <div className="flex flex-col gap-3">
                 {trend.alternatives.map((alt) => (
-                  <div key={alt.name} className="rounded-xl border border-border/50 bg-card p-4">
+                  <div key={alt.name} className="border border-border/50 bg-card p-4">
                     <div className="flex items-start justify-between gap-2">
                       <h3 className="font-medium text-foreground">{alt.name}</h3>
                       {alt.vendor && (
-                        <span className="shrink-0 rounded bg-secondary px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
+                        <span className="shrink-0 bg-secondary px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
                           {alt.vendor}
                         </span>
                       )}
@@ -237,7 +240,7 @@ export default function TrendDetailPage() {
         {/* Benefits & Use Cases */}
         <div className="mt-8 grid gap-8 sm:mt-12 lg:grid-cols-2">
           {/* Key Benefits */}
-          <div className="rounded-xl border border-border/50 bg-card p-6">
+          <div className="border border-border/50 bg-card p-6">
             <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-foreground">
               <Lightbulb className="h-5 w-5 text-amber-400" />
               Wesentliche Vorteile
@@ -253,7 +256,7 @@ export default function TrendDetailPage() {
           </div>
 
           {/* Use Cases */}
-          <div className="rounded-xl border border-border/50 bg-card p-6">
+          <div className="border border-border/50 bg-card p-6">
             <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-foreground">
               <Target className="h-5 w-5 text-sky-400" />
               Anwendungsfälle
@@ -261,7 +264,7 @@ export default function TrendDetailPage() {
             <ul className="space-y-3">
               {trend.useCases.map((useCase, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <div className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400" />
+                  <div className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-sky-400" />
                   <span className="text-sm text-muted-foreground">{useCase}</span>
                 </li>
               ))}
@@ -273,23 +276,24 @@ export default function TrendDetailPage() {
         <div className="mt-12 flex flex-wrap justify-center gap-3">
           <Link
             href="/#trends"
-            className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-6 py-3 text-sm font-medium text-secondary-foreground transition-colors hover:bg-muted"
+            className="flex items-center gap-2 border border-border bg-secondary px-6 py-3 text-sm font-medium text-secondary-foreground transition-colors hover:bg-muted"
           >
             <ArrowLeft className="h-4 w-4" />
             Zurück zur Übersicht
           </Link>
           <Link
             href={`/report?ids=${trend.id}`}
-            className="flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:brightness-110"
+            className="flex items-center gap-2 bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:brightness-110"
           >
             Als PDF exportieren
           </Link>
           <Link
             href={`/vergleich?ids=${trend.id}`}
-            className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-6 py-3 text-sm font-medium text-secondary-foreground transition-colors hover:bg-muted"
+            className="flex items-center gap-2 border border-border bg-secondary px-6 py-3 text-sm font-medium text-secondary-foreground transition-colors hover:bg-muted"
           >
             Mit anderen vergleichen
           </Link>
+        </div>
         </div>
       </main>
     </div>

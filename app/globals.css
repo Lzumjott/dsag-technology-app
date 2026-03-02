@@ -10,39 +10,62 @@
 
 @layer base {
   :root {
-    --background: 200 20% 6%;
-    --foreground: 180 10% 92%;
-    --card: 200 18% 9%;
-    --card-foreground: 180 10% 92%;
-    --popover: 200 18% 9%;
-    --popover-foreground: 180 10% 92%;
-    --primary: 168 80% 45%;
-    --primary-foreground: 200 20% 6%;
-    --secondary: 200 15% 14%;
-    --secondary-foreground: 180 10% 85%;
-    --muted: 200 12% 12%;
-    --muted-foreground: 200 8% 55%;
-    --accent: 168 70% 40%;
-    --accent-foreground: 200 20% 6%;
+    --background: 0 0% 96%;
+    --foreground: 163 29% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 163 29% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 163 29% 8%;
+    --primary: 90 100% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 91%;
+    --secondary-foreground: 163 29% 8%;
+    --muted: 0 0% 91%;
+    --muted-foreground: 120 1% 47%;
+    --accent: 90 100% 42%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
-    --border: 200 12% 16%;
-    --input: 200 12% 16%;
-    --ring: 168 80% 45%;
-    --chart-1: 168 80% 45%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 90 100% 42%;
+    --chart-1: 90 100% 42%;
     --chart-2: 200 60% 50%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --radius: 0.75rem;
-    --sidebar-background: 200 18% 9%;
-    --sidebar-foreground: 180 10% 92%;
-    --sidebar-primary: 168 80% 45%;
-    --sidebar-primary-foreground: 200 20% 6%;
-    --sidebar-accent: 200 15% 14%;
-    --sidebar-accent-foreground: 180 10% 85%;
-    --sidebar-border: 200 12% 16%;
-    --sidebar-ring: 168 80% 45%;
+    --radius: 0rem;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 163 29% 8%;
+    --sidebar-primary: 90 100% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 91%;
+    --sidebar-accent-foreground: 163 29% 8%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 90 100% 42%;
+
+    /* Responsive grid unit: N columns across the viewport */
+    --grid-columns: 4;
+    --grid-unit: calc(100vw / var(--grid-columns));
+    /* Grid-Subdivisions for smaller elements */
+    --grid-unit-2:       calc(var(--grid-unit) * 2);
+    --grid-unit-half:    calc(var(--grid-unit) / 2);
+    --grid-unit-quarter: calc(var(--grid-unit) / 4);
+    --grid-unit-eighth:  calc(var(--grid-unit) / 8);
+  }
+
+  /* Tablet: 6 columns */
+  @media (min-width: 640px) {
+    :root {
+      --grid-columns: 6;
+    }
+  }
+
+  /* Desktop: 8 columns */
+  @media (min-width: 1280px) {
+    :root {
+      --grid-columns: 8;
+    }
   }
 }
 
@@ -59,6 +82,51 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    background-image:
+      linear-gradient(to right, #E7E6E6 1px, transparent 1px),
+      linear-gradient(to bottom, #E7E6E6 1px, transparent 1px);
+    background-size: var(--grid-unit) var(--grid-unit);
+    background-position: 0 0;
+  }
+
+  /* Grid-aligned section: content spans inner grid columns */
+  .grid-section {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    width: 100%;
+  }
+
+  .grid-section > .grid-content {
+    grid-column: 2 / -2;
+  }
+
+  @media (min-width: 1536px) {
+    .grid-section > .grid-content {
+      grid-column: 2 / -2;
+    }
+  }
+
+  /* Full-bleed child within grid-section */
+  .grid-section > .grid-full {
+    grid-column: 1 / -1;
+  }
+
+  /* Grid-aligned row: uses the same column size as the background grid.
+     Place it directly on the viewport (not inside grid-content).
+     Children each occupy 1 grid column by default. */
+  .grid-row {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    width: 100%;
+  }
+
+  /* Inner grid: for elements inside grid-content that should still
+     use grid-unit sized columns. Auto-fill ensures tiles are exactly
+     one grid-unit wide and wrap responsively. */
+  .grid-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--grid-unit), 1fr));
+    width: 100%;
   }
 }
 
@@ -91,13 +159,32 @@
 
 /* Selection color */
 ::selection {
-  background: hsl(168 80% 45% / 0.3);
-  color: hsl(180 10% 92%);
+  background: #80D80040;
+  color: #111918;
 }
 
 /* Focus visible ring */
 :focus-visible {
-  outline: 2px solid hsl(168 80% 45%);
+  outline: 2px solid #80D800;
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: 0;
+}
+
+/* Global link styles */
+@layer base {
+  a[href]:not([class]) {
+    color: #767776;
+    transition: color 0.15s ease;
+  }
+  a[href]:not([class]):hover {
+    color: #80D800;
+  }
+}
+
+/* Print: remove background grid */
+@media print {
+  body {
+    background-image: none;
+    background-color: #ffffff;
+  }
 }

@@ -50,32 +50,33 @@ export function TrendsSection() {
   const activeFilterCount = (statusFilter !== "all" ? 1 : 0) + (category !== "Alle" ? 1 : 0) + (industryFilter !== "all" ? 1 : 0)
 
   return (
-    <section id="trends" className="scroll-mt-16 px-4 py-10 sm:px-6 sm:py-16 md:py-24">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-6 sm:mb-10">
-          <h2 className="font-display text-2xl font-bold tracking-tight text-foreground text-balance sm:text-3xl md:text-4xl">
+    <section id="trends" className="grid-section scroll-mt-20">
+      <div className="grid-content">
+        {/* Title area: full grid-unit height, text aligned to bottom */}
+        <div className="flex min-h-[var(--grid-unit)] flex-col justify-end pb-[var(--grid-unit-eighth)]">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-[#111918] text-balance sm:text-3xl md:text-4xl">
             Technologische Trends
           </h2>
-          <p className="mt-2 max-w-2xl text-sm text-muted-foreground sm:mt-3 sm:text-base">
-            Durchsuchen Sie {trends.length} Trends nach Kategorien, Status, SAP-Loesungen oder Schluesselwoertern.
+          <p className="mt-2 max-w-2xl text-sm text-[#767776] sm:mt-3 sm:text-base">
+            Durchsuchen Sie {trends.length} Trends nach Kategorien, Status, SAP-Lösungen oder Schlüsselwörtern.
           </p>
         </div>
 
-        {/* Search + Filter Toggle */}
-        <div className="mb-4 flex gap-2 sm:mb-5">
+        {/* Search + Filter Toggle — pushed up into next grid row */}
+        <div className="mt-[var(--grid-unit-eighth)] mb-4 flex gap-2 sm:mb-5">
           <div className="relative flex-1 sm:max-w-md">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#767776]" />
             <input
               type="search"
-              placeholder="Trends, SAP-Loesungen, Alternativen..."
+              placeholder="Trends, SAP-Lösungen, Alternativen..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full rounded-xl border border-border bg-card py-3 pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary/50 focus:outline-none focus:ring-1 focus:ring-primary/30 sm:rounded-lg sm:py-2.5"
+              className="w-full border border-[#DADADA] bg-white py-3 pl-10 pr-4 text-sm text-[#111918] placeholder:text-[#767776] focus:border-[#80D800]/50 focus:outline-none focus:ring-1 focus:ring-[#80D800]/30 sm:py-2.5"
             />
             {search && (
               <button
                 onClick={() => setSearch("")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[#767776] hover:text-[#111918]"
               >
                 <X className="h-4 w-4" />
               </button>
@@ -84,16 +85,16 @@ export function TrendsSection() {
           <button
             onClick={() => setShowFilters(!showFilters)}
             className={cn(
-              "flex h-[46px] items-center gap-2 rounded-xl border px-3 text-sm transition-colors sm:h-[42px] sm:rounded-lg sm:px-4",
+              "flex h-[var(--grid-unit-quarter)] items-center gap-2 border px-3 text-sm transition-colors sm:px-4",
               showFilters || activeFilterCount > 0
-                ? "border-primary/30 bg-primary/10 text-primary"
-                : "border-border bg-card text-muted-foreground hover:bg-secondary"
+                ? "border-[#80D800]/30 bg-[#80D800]/10 text-[#80D800]"
+                : "border-[#DADADA] bg-white text-[#767776] hover:bg-[#E7E6E6]"
             )}
           >
             <SlidersHorizontal className="h-4 w-4" />
             <span className="hidden sm:inline">Filter</span>
             {activeFilterCount > 0 && (
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
+               <span className="flex h-5 w-5 items-center justify-center bg-[#80D800] text-[10px] font-bold text-white">
                 {activeFilterCount}
               </span>
             )}
@@ -102,18 +103,18 @@ export function TrendsSection() {
 
         {/* Extended Filters */}
         {showFilters && (
-          <div className="mb-4 rounded-xl border border-border/50 bg-card p-3 sm:mb-5 sm:p-4">
+          <div className="mb-4 border border-[#DADADA] bg-white p-3 sm:mb-5 sm:p-4">
             <div className="mb-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
               <div>
-                <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-wider text-[#767776]">
                   Reifegrad
                 </label>
                 <div className="flex flex-wrap gap-1.5">
                   <button
                     onClick={() => setStatusFilter("all")}
                     className={cn(
-                      "rounded-md border px-2.5 py-1 text-[11px] font-medium transition-all sm:text-xs",
-                      statusFilter === "all" ? "border-primary/50 bg-primary/10 text-primary" : "border-border bg-secondary text-muted-foreground"
+                      "border px-2.5 py-1 text-[11px] font-medium transition-all sm:text-xs",
+                      statusFilter === "all" ? "border-[#80D800]/50 bg-[#80D800]/10 text-[#80D800]" : "border-[#DADADA] bg-[#E7E6E6] text-[#767776]"
                     )}
                   >
                     Alle
@@ -123,8 +124,8 @@ export function TrendsSection() {
                       key={s}
                       onClick={() => setStatusFilter(s)}
                       className={cn(
-                        "rounded-md border px-2.5 py-1 text-[11px] font-medium transition-all sm:text-xs",
-                        statusFilter === s ? statusColors[s] : "border-border bg-secondary text-muted-foreground"
+                        "border px-2.5 py-1 text-[11px] font-medium transition-all sm:text-xs",
+                        statusFilter === s ? statusColors[s] : "border-[#DADADA] bg-[#E7E6E6] text-[#767776]"
                       )}
                     >
                       {statusLabels[s]}
@@ -133,7 +134,7 @@ export function TrendsSection() {
                 </div>
               </div>
               <div>
-                <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                <label className="mb-1.5 block text-[11px] font-semibold uppercase tracking-wider text-[#767776]">
                   Sortierung
                 </label>
                 <div className="flex flex-wrap gap-1.5">
@@ -146,8 +147,8 @@ export function TrendsSection() {
                       key={opt.key}
                       onClick={() => setSortBy(opt.key)}
                       className={cn(
-                        "rounded-md border px-2.5 py-1 text-[11px] font-medium transition-all sm:text-xs",
-                        sortBy === opt.key ? "border-primary/50 bg-primary/10 text-primary" : "border-border bg-secondary text-muted-foreground"
+                        "border px-2.5 py-1 text-[11px] font-medium transition-all sm:text-xs",
+                        sortBy === opt.key ? "border-[#80D800]/50 bg-[#80D800]/10 text-[#80D800]" : "border-[#DADADA] bg-[#E7E6E6] text-[#767776]"
                       )}
                     >
                       {opt.label}
@@ -158,8 +159,8 @@ export function TrendsSection() {
             </div>
 
             {/* Industry Filter */}
-            <div className="mt-3 border-t border-border/50 pt-3">
-              <label className="mb-1.5 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+            <div className="mt-3 border-t border-[#DADADA] pt-3">
+              <label className="mb-1.5 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-[#767776]">
                 <Building2 className="h-3 w-3" />
                 Branche
               </label>
@@ -167,8 +168,8 @@ export function TrendsSection() {
                 <button
                   onClick={() => setIndustryFilter("all")}
                   className={cn(
-                    "rounded-md border px-2.5 py-1 text-[11px] font-medium transition-all sm:text-xs",
-                    industryFilter === "all" ? "border-primary/50 bg-primary/10 text-primary" : "border-border bg-secondary text-muted-foreground"
+                    "border px-2.5 py-1 text-[11px] font-medium transition-all sm:text-xs",
+                    industryFilter === "all" ? "border-[#80D800]/50 bg-[#80D800]/10 text-[#80D800]" : "border-[#DADADA] bg-[#E7E6E6] text-[#767776]"
                   )}
                 >
                   Alle
@@ -178,8 +179,8 @@ export function TrendsSection() {
                     key={ind}
                     onClick={() => setIndustryFilter(ind)}
                     className={cn(
-                      "rounded-md border px-2.5 py-1 text-[11px] font-medium transition-all sm:text-xs",
-                      industryFilter === ind ? industryColors[ind] : "border-border bg-secondary text-muted-foreground"
+                      "border px-2.5 py-1 text-[11px] font-medium transition-all sm:text-xs",
+                      industryFilter === ind ? industryColors[ind] : "border-[#DADADA] bg-[#E7E6E6] text-[#767776]"
                     )}
                   >
                     {ind}
@@ -191,9 +192,9 @@ export function TrendsSection() {
             {activeFilterCount > 0 && (
               <button
                 onClick={() => { setStatusFilter("all"); setCategory("Alle"); setIndustryFilter("all"); }}
-                className="mt-3 text-[11px] text-primary underline underline-offset-2 sm:text-xs"
+                className="mt-3 text-[11px] text-[#80D800] underline underline-offset-2 sm:text-xs"
               >
-                Alle Filter zuruecksetzen
+                Alle Filter zurücksetzen
               </button>
             )}
           </div>
@@ -206,14 +207,14 @@ export function TrendsSection() {
 
         {/* Results count + Report Link */}
         <div className="mb-4 flex items-center justify-between sm:mb-5">
-          <div className="text-xs text-muted-foreground sm:text-sm">
+          <div className="text-xs text-[#767776] sm:text-sm">
             {filtered.length} von {trends.length} Trends angezeigt
-            {search && <span className="ml-1">fuer &quot;{search}&quot;</span>}
+            {search && <span className="ml-1">für &quot;{search}&quot;</span>}
           </div>
           {filtered.length > 0 && (
             <Link
               href={`/report?${industryFilter !== "all" ? `industry=${industryFilter}&` : ""}${category !== "Alle" ? `category=${category}` : ""}`}
-              className="flex items-center gap-1.5 rounded-lg border border-border bg-secondary px-3 py-1.5 text-xs font-medium text-secondary-foreground transition-colors hover:bg-muted"
+              className="flex items-center gap-1.5 border border-[#DADADA] bg-[#E7E6E6] px-3 py-1.5 text-xs font-medium text-[#111918] transition-colors hover:bg-[#DADADA]"
             >
               <FileText className="h-3.5 w-3.5" />
               <span className="hidden sm:inline">Report exportieren</span>
@@ -222,23 +223,23 @@ export function TrendsSection() {
           )}
         </div>
 
-        {/* Trend Cards */}
-        <div className="flex flex-col gap-3 sm:gap-4 lg:grid lg:grid-cols-2">
+        {/* Trend Cards: aligned to background grid rows */}
+        <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: 0 }}>
           {filtered.map((trend) => (
             <TrendCard key={trend.id} trend={trend} />
           ))}
         </div>
 
         {filtered.length === 0 && (
-          <div className="rounded-xl border border-dashed border-border py-12 text-center sm:py-16">
-            <p className="text-sm text-muted-foreground">
-              Keine Trends fuer diese Filterung gefunden.
+          <div className="border border-dashed border-[#DADADA] py-12 text-center sm:py-16">
+            <p className="text-sm text-[#767776]">
+              Keine Trends für diese Filterung gefunden.
             </p>
             <button
               onClick={() => { setSearch(""); setCategory("Alle"); setStatusFilter("all"); setIndustryFilter("all"); }}
-              className="mt-3 text-sm text-primary underline underline-offset-2"
+              className="mt-3 text-sm text-[#80D800] underline underline-offset-2"
             >
-              Filter zuruecksetzen
+              Filter zurücksetzen
             </button>
           </div>
         )}

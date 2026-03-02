@@ -37,34 +37,37 @@ function ReportContent() {
   }
 
   return (
-    <div className="min-h-screen bg-white text-black print:bg-white">
+    <div className="min-h-screen bg-background text-black print:bg-white">
       {/* Screen Header (hidden in print) */}
       <header className="sticky top-0 z-50 border-b border-gray-200 bg-white print:hidden">
-        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6">
-          <div className="flex items-center gap-4">
-            <Link href="/#trends" className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
-              <ArrowLeft className="h-4 w-4" />
-              <span className="hidden sm:inline">Zurück</span>
-            </Link>
-            <div className="h-4 w-px bg-gray-300" />
-            <span className="text-sm font-medium text-gray-900">Trend-Report</span>
+        <div className="grid-section">
+          <div className="grid-content flex h-14 items-center justify-between">
+            <div className="flex items-center gap-4">
+              <Link href="/#trends" className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900">
+                <ArrowLeft className="h-4 w-4" />
+                <span className="hidden sm:inline">Zurück</span>
+              </Link>
+              <div className="h-4 w-px bg-gray-300" />
+              <span className="text-sm font-medium text-gray-900">Trend-Report</span>
+            </div>
+            <button
+              onClick={handlePrint}
+              className="flex items-center gap-2 bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+            >
+              <Printer className="h-4 w-4" />
+              Als PDF drucken
+            </button>
           </div>
-          <button
-            onClick={handlePrint}
-            className="flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-          >
-            <Printer className="h-4 w-4" />
-            Als PDF drucken
-          </button>
         </div>
       </header>
 
       {/* Report Content */}
-      <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6 print:max-w-none print:px-8 print:py-4">
+      <main className="grid-section py-8 print:block print:px-8 print:py-4">
+        <div className="grid-content print:!col-span-1 print:!grid-column-auto">
         {/* Report Header */}
         <div className="mb-8 border-b border-gray-200 pb-6 print:mb-4 print:pb-4">
           <div className="flex items-center gap-3 mb-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 print:bg-blue-600">
+            <div className="flex h-10 w-10 items-center justify-center bg-blue-600 print:bg-blue-600">
               <span className="text-sm font-bold text-white">RC</span>
             </div>
             <div>
@@ -81,7 +84,7 @@ function ReportContent() {
         </div>
 
         {/* Executive Summary */}
-        <div className="mb-8 rounded-lg border border-gray-200 bg-gray-50 p-4 print:mb-4 print:bg-gray-100 print:p-3">
+        <div className="mb-8 border border-gray-200 bg-gray-50 p-4 print:mb-4 print:bg-gray-100 print:p-3">
           <h2 className="mb-3 text-base font-semibold text-gray-900">Zusammenfassung</h2>
           <div className="grid grid-cols-2 gap-4 text-sm sm:grid-cols-4 print:grid-cols-4">
             <div>
@@ -114,7 +117,7 @@ function ReportContent() {
           {selectedTrends.map((trend, index) => (
             <div 
               key={trend.id} 
-              className="rounded-lg border border-gray-200 p-4 print:break-inside-avoid print:p-3"
+              className="border border-gray-200 p-4 print:break-inside-avoid print:p-3"
             >
               {/* Trend Header */}
               <div className="mb-3 flex items-start justify-between gap-4 print:mb-2">
@@ -216,6 +219,7 @@ function ReportContent() {
         <div className="mt-8 border-t border-gray-200 pt-4 text-center text-xs text-gray-500 print:mt-4">
           <p>© {new Date().getFullYear()} RealCore Group GmbH - DSAG Technologietage 2026</p>
           <p className="mt-1">Dieser Report wurde automatisch generiert. Alle Angaben ohne Gewähr.</p>
+        </div>
         </div>
       </main>
 
