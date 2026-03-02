@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, Sparkles, Calendar } from "lucide-react"
+import { ArrowRight, Calendar } from "lucide-react"
 import { trends } from "@/lib/trends-data"
 import { AnimatedCounter } from "./animated-counter"
 
@@ -22,12 +22,8 @@ export function HeroSection() {
       {/* Asymmetric hero layout: 5 of 8 columns on desktop */}
       <div className="grid-section">
         <div className="col-span-full lg:col-span-5 py-[var(--grid-unit)] px-[var(--grid-unit)]">
-              <div className="mb-6 inline-flex items-center gap-2 border border-[#DADADA] bg-white px-4 py-2">
-                <Sparkles className="h-3.5 w-3.5 text-[#80D800] sm:h-4 sm:w-4" />
-                <span className="text-xs font-medium text-[#767776] sm:text-sm">DSAG Technologietage 2026</span>
-              </div>
 
-              <h1 className="max-w-4xl font-display text-4xl font-bold leading-tight tracking-tight text-[#111918] text-balance sm:text-5xl md:text-6xl lg:text-7xl">
+              <h1 className="mt-10 max-w-4xl font-display text-4xl font-bold leading-tight tracking-tight text-[#111918] text-balance sm:text-5xl md:text-6xl lg:text-7xl">
                 Technologie-Trends der{" "}
                 <span className="text-[#80D800]">Digitalisierung</span>
               </h1>
